@@ -32,7 +32,7 @@ public static class Questions
             QuestionSet q = new QuestionSet(randomQ);
             if (q.Category == cat)
             {
-                return (q);
+                return q;
             }
             else
             {
@@ -48,10 +48,17 @@ public static class Questions
 
     public static void LoadAllQuestions()
     {
+        CompetitveEvents = new List<QuestionSet>();
+        BusinessSkills = new List<QuestionSet>();
+        AboutFBLA = new List<QuestionSet>();
+        FBLAHistory = new List<QuestionSet>();
+        NationalOfficers = new List<QuestionSet>();
+
         // Loop Through All to load all the questions into the list
         for (int i = 0; i < totalQuestions; i++)
         {
             QuestionSet q = new QuestionSet(i);
+
             if (q.Category == QuestionSet.Categories.CompetitveEvents)
             {
                 CompetitveEvents.Add(q);

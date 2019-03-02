@@ -37,26 +37,28 @@ public static class QuestionDatabase
     {
         using (var reader = new StreamReader(@path))
         {
-            List<string> questions = new List<string>();
-            List<string> choice1s = new List<string>();
-            List<string> choice2s = new List<string>();
-            List<string> choice3s = new List<string>();
-            List<string> choice4s = new List<string>();
-            List<string> answers = new List<string>();
-            List<string> categories = new List<string>();
+            
+            questions = new List<string>();
+            choice1s = new List<string>();
+            choice2s = new List<string>();
+            choice3s = new List<string>();
+            choice4s = new List<string>();
+            answers = new List<string>();
+            categories = new List<string>();
+            
 
             while (!reader.EndOfStream)
             {
                 var line = reader.ReadLine();
-                var values = line.Split(';');
+                var values = line.Split(',');
 
-                questions.Add(values[0]);
-                choice1s.Add(values[1]);
-                choice2s.Add(values[2]);
-                choice3s.Add(values[3]);
-                choice4s.Add(values[4]);
-                answers.Add(values[5]);
-                categories.Add(values[6]);
+                questions.Add(values[0].ToString());
+                choice1s.Add(values[1].ToString());
+                choice2s.Add(values[2].ToString());
+                choice3s.Add(values[3].ToString());
+                choice4s.Add(values[4].ToString());
+                answers.Add(values[5].ToString());
+                categories.Add(values[6].ToString());
             }
         }
     }

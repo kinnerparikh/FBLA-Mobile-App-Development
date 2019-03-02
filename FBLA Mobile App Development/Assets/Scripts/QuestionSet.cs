@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System;
-
+using UnityEngine;
 public class QuestionSet
 {
 
@@ -45,7 +45,6 @@ public class QuestionSet
         this.Choice4 = load(question, 4);
         this.Answer = load(question, 5);
         String stringCat = load(question, 6);
-        
         // Set category from integer
         switch (Convert.ToInt32(stringCat))
         {
@@ -66,7 +65,7 @@ public class QuestionSet
                 break;
             default:
                 // Defualt as Competitive Events
-                Console.WriteLine("ERROR: Categories can only be from 1 - 5");
+                Debug.LogError("ERROR: Categories can only be from 1 - 5");
                 this.category = Categories.CompetitveEvents;
                 break;
         }
@@ -76,7 +75,7 @@ public class QuestionSet
     // Used to return string from the lists in the Question Database
     private string load(int question, int type)
     {
-        List<string> list;
+        List<string> list = new List<string>();
         switch (type)
         {
             case 0:
@@ -102,7 +101,7 @@ public class QuestionSet
                 break;
             default:
                 // Default get the question string
-                Console.WriteLine("ERROR: Type Can Only Be From 0 - 5");
+                Debug.LogError("ERROR: Type Can Only Be From 0 - 5");
                 list = QuestionDatabase.questions;
                 break;
         }
