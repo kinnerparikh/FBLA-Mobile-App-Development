@@ -80,7 +80,8 @@ public class GameController : MonoBehaviour
         else
         {
             Debug.Log("Incorrect!! Correct choice is " + Int32.Parse(currentQuestion.Answer) + " you chose " + a);
-            Vibration.Vibrate();
+            Vibration.CreateOneShot(200);
+            Debug.Log("vibrate");
         }
         SetQuestion(Questions.GetQuestion(Topic.choosenTopic));
     }
