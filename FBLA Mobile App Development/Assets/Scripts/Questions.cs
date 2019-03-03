@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System;
+using UnityEngine;
 
 public static class Questions
 {
@@ -12,9 +13,6 @@ public static class Questions
     * ALWAYS run LoadAllQuestions to load the questions in to the lists (run this after SetTotalQuestions)
     * 
     */
-    // Change depend on the amount of questions, used for RNG to generate questions
-    public static int totalQuestions;
-
     // Stores all questions in lists based on its categories
     public static List<QuestionSet> CompetitveEvents;
     public static List<QuestionSet> BusinessSkills;
@@ -22,12 +20,16 @@ public static class Questions
     public static List<QuestionSet> FBLAHistory;
     public static List<QuestionSet> NationalOfficers;
 
+    public static int QuestionCount = 0;
+
     public static QuestionSet GetQuestion(QuestionSet.Categories cat)
     {
         while (true)
         {
-            Random rnd = new Random();
-            int randomQ = rnd.Next(0, totalQuestions);
+            System.Random rnd = new System.Random();
+            int randomQ = rnd.Next(0, CompetitveEvents.Count);
+
+            Debug.Log("Total Questions: " + CompetitveEvents.Count);
 
             QuestionSet q = new QuestionSet(randomQ);
             if (q.Category == cat)
@@ -41,13 +43,9 @@ public static class Questions
         }
     }
 
-    public static void SetTotalQuestions(int tq)
-    {
-        totalQuestions = tq;
-    }
-
     public static void LoadAllQuestions()
     {
+
         CompetitveEvents = new List<QuestionSet>();
         BusinessSkills = new List<QuestionSet>();
         AboutFBLA = new List<QuestionSet>();
@@ -55,7 +53,7 @@ public static class Questions
         NationalOfficers = new List<QuestionSet>();
 
         // Loop Through All to load all the questions into the list
-        for (int i = 0; i < totalQuestions; i++)
+        for (int i = 0; i < QuestionDatabase.questions.Count; i++)
         {
             QuestionSet q = new QuestionSet(i);
 
@@ -80,5 +78,7 @@ public static class Questions
                 NationalOfficers.Add(q);
             }
         }
+
+        Debug.Log("Loaded Questions");
     }
 }
