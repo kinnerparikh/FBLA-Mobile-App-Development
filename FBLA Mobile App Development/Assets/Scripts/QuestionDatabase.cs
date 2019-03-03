@@ -35,31 +35,30 @@ public static class QuestionDatabase
     // Load Questions from a CSV file for easy access
     public static void ImportGame(string path)
     {
-        using (var reader = new StreamReader(@path))
+        TextAsset qs = Resources.Load<TextAsset>(path);
+
+        string[] data = qs.text.Split(new char[] {'\n'});
+
+        questions = new List<string>();
+        choice1s = new List<string>();
+        choice2s = new List<string>();
+        choice3s = new List<string>();
+        choice4s = new List<string>();
+        answers = new List<string>();
+        categories = new List<string>();
+
+
+        for (int i = 1; i < data.Length - 1; i++)
         {
-            
-            questions = new List<string>();
-            choice1s = new List<string>();
-            choice2s = new List<string>();
-            choice3s = new List<string>();
-            choice4s = new List<string>();
-            answers = new List<string>();
-            categories = new List<string>();
-            
+            string[] row = data[i].Split(new char[] {','});
 
-            while (!reader.EndOfStream)
-            {
-                var line = reader.ReadLine();
-                var values = line.Split(',');
-
-                questions.Add(values[0].ToString());
-                choice1s.Add(values[1].ToString());
-                choice2s.Add(values[2].ToString());
-                choice3s.Add(values[3].ToString());
-                choice4s.Add(values[4].ToString());
-                answers.Add(values[5].ToString());
-                categories.Add(values[6].ToString());
-            }
+            questions.Add(row[0].ToString());
+            choice1s.Add(row[1].ToString());
+            choice2s.Add(row[2].ToString());
+            choice3s.Add(row[3].ToString());
+            choice4s.Add(row[4].ToString());
+            answers.Add(row[5].ToString());
+            categories.Add(row[6].ToString());
         }
     }
 

@@ -41,7 +41,7 @@ public class GameController : MonoBehaviour
         // Always run the following in order
 
         // Imports questions to lists of strings from csv
-        QuestionDatabase.ImportGame("Assets/Old.csv");
+        QuestionDatabase.ImportGame("Test");
         // Load all the strings into lists of Question Set Objects organized by categories
         Questions.LoadAllQuestions();
 
