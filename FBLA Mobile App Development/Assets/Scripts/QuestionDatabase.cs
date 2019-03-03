@@ -36,6 +36,7 @@ public static class QuestionDatabase
     public static void ImportGame(string path)
     {
         TextAsset qs = Resources.Load<TextAsset>(path);
+        //Debug.Log(qs.text);
 
         string[] data = qs.text.Split(new char[] {'\n'});
 

@@ -55,6 +55,7 @@ public static class Questions
         // Loop Through All to load all the questions into the list
         for (int i = 0; i < QuestionDatabase.questions.Count; i++)
         {
+
             QuestionSet q = new QuestionSet(i);
 
             if (q.Category == QuestionSet.Categories.CompetitveEvents)

@@ -16,9 +16,11 @@ public class GameController : MonoBehaviour
     * 
     */
 
+    // Game Objects : Question
     [SerializeField]
     private GameObject questionsText;
 
+    // Game Objects : Choices
     [SerializeField]
     private GameObject choice1Text;
     [SerializeField]
@@ -46,31 +48,32 @@ public class GameController : MonoBehaviour
         // Load all the strings into lists of Question Set Objects organized by categories
         Questions.LoadAllQuestions();
 
-        // Get first question based on the choosenTopic
+        // Get first question based on the chosenTopic
         currentQNum++;
-        SetQuestion(Questions.GetQuestion(Topic.choosenTopic));
+        SetQuestion(Questions.GetQuestion(Topic.chosenTopic));
     }
 
-    public void Choosed1()
+    // 
+    public void Chosen1()
     {
-        ChoosedAnswer(1);
+        ChosenAnswer(1);
     }
-    public void Choosed2()
+    public void Chosen2()
     {
-        ChoosedAnswer(2);
-    }
-
-    public void Choosed3()
-    {
-        ChoosedAnswer(3);
+        ChosenAnswer(2);
     }
 
-    public void Choosed4()
+    public void Chosen3()
     {
-        ChoosedAnswer(4);
+        ChosenAnswer(3);
     }
 
-    private void ChoosedAnswer(int a)
+    public void Chosen4()
+    {
+        ChosenAnswer(4);
+    }
+
+    private void ChosenAnswer(int a)
     {
         if (Int32.Parse(currentQuestion.Answer) == a)
         {
@@ -79,11 +82,11 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            Debug.Log("Incorrect!! Correct choice is " + Int32.Parse(currentQuestion.Answer) + " you chose " + a);
             Vibration.CreateOneShot(200);
-            Debug.Log("vibrate");
+            Debug.Log("Incorrect!! Correct choice is " + Int32.Parse(currentQuestion.Answer) + " you chose " + a);
+            //Debug.Log("vibrate");
         }
-        SetQuestion(Questions.GetQuestion(Topic.choosenTopic));
+        SetQuestion(Questions.GetQuestion(Topic.chosenTopic));
     }
 
 
@@ -95,7 +98,7 @@ public class GameController : MonoBehaviour
         // === QuestionSet q1 = Questions.GetQuestion(QuestionSet.Categories.AboutFBLA);
 
         // Use getters and setter to access and change the information
-        // === Debug.Log(q1.Answer);
+        // === Debug.Log(q1.Answer); 
 
         /* Testing Code
         if (Input.GetKeyDown(KeyCode.Space))
@@ -117,7 +120,7 @@ public class GameController : MonoBehaviour
         choice4Text.GetComponent<TextMeshProUGUI>().text = q.Choice4;
         currentQuestion = q;
 
-        Debug.Log("New Questions: " + q.Question);
+        //Debug.Log("New Questions: " + q.Question);
     }
 
 
