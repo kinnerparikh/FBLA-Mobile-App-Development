@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class GameController : MonoBehaviour
 {
@@ -13,10 +14,6 @@ public class GameController : MonoBehaviour
     * Controller class controls how the game is ran in unity and sets everything up
     * 
     */
-
-    // Total amount of questions (Change in inspector)
-    [SerializeField]
-    private int totalQuestions = 10;
 
     [SerializeField]
     private GameObject questionsText;
@@ -30,7 +27,13 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private GameObject choice4Text;
 
+    // Current Question
+    private int currentQNum = 0;
+    private QuestionSet currentQuestion;
 
+    // Stats
+    private int numCorrect = 0;
+  
 
     // Start of program
     void Start()
@@ -39,11 +42,69 @@ public class GameController : MonoBehaviour
 
         // Imports questions to lists of strings from csv
         QuestionDatabase.ImportGame("Assets/Test.csv");
-        // Set the total amount of questions for the RNG
-        Questions.SetTotalQuestions(totalQuestions);
         // Load all the strings into lists of Question Set Objects organized by categories
         Questions.LoadAllQuestions();
+
+        // Get first question based on the choosenTopic
+        currentQNum++;
+        SetQuestion(Questions.GetQuestion(Topic.choosenTopic));
     }
+
+    public void Choosed1()
+    {
+        if (Int32.Parse(currentQuestion.Answer) == 1)
+        {
+            numCorrect++;
+            Debug.Log("Correct!!");
+        }
+        else
+        {
+            Debug.Log("Incorrect!! Correct choice is " + Int32.Parse(currentQuestion.Answer) + " you chose 1");
+        }
+        SetQuestion(Questions.GetQuestion(Topic.choosenTopic));
+    }
+    public void Choosed2()
+    {
+        if (Int32.Parse(currentQuestion.Answer) == 2)
+        {
+            numCorrect++;
+            Debug.Log("Correct!!");
+        }
+        else
+        {
+            Debug.Log("Incorrect!! Correct choice is " + Int32.Parse(currentQuestion.Answer) + " you chose 2");
+        }
+        SetQuestion(Questions.GetQuestion(Topic.choosenTopic));
+    }
+
+    public void Choosed3()
+    {
+        if (Int32.Parse(currentQuestion.Answer) == 3)
+        {
+            numCorrect++;
+            Debug.Log("Correct!!");
+        }
+        else
+        {
+            Debug.Log("Incorrect!! Correct choice is " + Int32.Parse(currentQuestion.Answer) + " you chose 3");
+        }
+        SetQuestion(Questions.GetQuestion(Topic.choosenTopic));
+    }
+
+    public void Choosed4()
+    {
+        if (Int32.Parse(currentQuestion.Answer) == 4)
+        {
+            numCorrect++;
+            Debug.Log("Correct!!");
+        }
+        else
+        {
+            Debug.Log("Incorrect!! Correct choice is " + Int32.Parse(currentQuestion.Answer) + " you chose 4");
+        }
+        SetQuestion(Questions.GetQuestion(Topic.choosenTopic));
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -55,22 +116,29 @@ public class GameController : MonoBehaviour
         // Use getters and setter to access and change the information
         // === Debug.Log(q1.Answer);
 
-
+        /* Testing Code
         if (Input.GetKeyDown(KeyCode.Space))
         {
             newQuestion();
         }
+        */
     }
 
-    private void newQuestion()
+
+    // Set Question onto the UI
+    private void SetQuestion(QuestionSet q)
     {
-        QuestionSet q1 = Questions.GetQuestion(QuestionSet.Categories.CompetitveEvents);
-        questionsText.GetComponent<TextMeshProUGUI>().text = q1.Question;
-        choice1Text.GetComponent<TextMeshProUGUI>().text = q1.Choice1;
-        choice2Text.GetComponent<TextMeshProUGUI>().text = q1.Choice2;
-        choice3Text.GetComponent<TextMeshProUGUI>().text = q1.Choice3;
-        choice4Text.GetComponent<TextMeshProUGUI>().text = q1.Choice4;
+   
+        questionsText.GetComponent<TextMeshProUGUI>().text = q.Question;
+        choice1Text.GetComponent<TextMeshProUGUI>().text = q.Choice1;
+        choice2Text.GetComponent<TextMeshProUGUI>().text = q.Choice2;
+        choice3Text.GetComponent<TextMeshProUGUI>().text = q.Choice3;
+        choice4Text.GetComponent<TextMeshProUGUI>().text = q.Choice4;
+        currentQuestion = q;
 
-        Debug.Log("New Questions: " + q1.Question);
+        Debug.Log("New Questions: " + q.Question);
     }
+
+
+
 }
