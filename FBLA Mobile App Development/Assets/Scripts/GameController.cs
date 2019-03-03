@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 
+
 public class GameController : MonoBehaviour
 {
     /* ===========================
@@ -41,7 +42,7 @@ public class GameController : MonoBehaviour
         // Always run the following in order
 
         // Imports questions to lists of strings from csv
-        QuestionDatabase.ImportGame("Test");
+        QuestionDatabase.ImportGame("Old");
         // Load all the strings into lists of Question Set Objects organized by categories
         Questions.LoadAllQuestions();
 
@@ -52,55 +53,34 @@ public class GameController : MonoBehaviour
 
     public void Choosed1()
     {
-        if (Int32.Parse(currentQuestion.Answer) == 1)
-        {
-            numCorrect++;
-            Debug.Log("Correct!!");
-        }
-        else
-        {
-            Debug.Log("Incorrect!! Correct choice is " + Int32.Parse(currentQuestion.Answer) + " you chose 1");
-        }
-        SetQuestion(Questions.GetQuestion(Topic.choosenTopic));
+        ChoosedAnswer(1);
     }
     public void Choosed2()
     {
-        if (Int32.Parse(currentQuestion.Answer) == 2)
-        {
-            numCorrect++;
-            Debug.Log("Correct!!");
-        }
-        else
-        {
-            Debug.Log("Incorrect!! Correct choice is " + Int32.Parse(currentQuestion.Answer) + " you chose 2");
-        }
-        SetQuestion(Questions.GetQuestion(Topic.choosenTopic));
+        ChoosedAnswer(2);
     }
 
     public void Choosed3()
     {
-        if (Int32.Parse(currentQuestion.Answer) == 3)
-        {
-            numCorrect++;
-            Debug.Log("Correct!!");
-        }
-        else
-        {
-            Debug.Log("Incorrect!! Correct choice is " + Int32.Parse(currentQuestion.Answer) + " you chose 3");
-        }
-        SetQuestion(Questions.GetQuestion(Topic.choosenTopic));
+        ChoosedAnswer(3);
     }
 
     public void Choosed4()
     {
-        if (Int32.Parse(currentQuestion.Answer) == 4)
+        ChoosedAnswer(4);
+    }
+
+    private void ChoosedAnswer(int a)
+    {
+        if (Int32.Parse(currentQuestion.Answer) == a)
         {
             numCorrect++;
             Debug.Log("Correct!!");
         }
         else
         {
-            Debug.Log("Incorrect!! Correct choice is " + Int32.Parse(currentQuestion.Answer) + " you chose 4");
+            Debug.Log("Incorrect!! Correct choice is " + Int32.Parse(currentQuestion.Answer) + " you chose " + a);
+            Vibration.Vibrate();
         }
         SetQuestion(Questions.GetQuestion(Topic.choosenTopic));
     }
