@@ -23,5 +23,9 @@ public class EndController : MonoBehaviour
     {
         SceneManager.LoadScene("Topic");
         GameController.numCorrect = 0;
+        for (int i = 0; i < Questions.questionsUsed.Count; i++)
+        {
+            Questions.questionsUsed[i].Used = false;
+        }
     }
 }

@@ -20,6 +20,7 @@ public class QuestionSet
     private string choice3;
     private string choice4;
     private string answer;
+    private bool used;
 
     private Categories category;
 
@@ -148,6 +149,11 @@ public class QuestionSet
     {
         get { return category; }
         set { category = value; }
+    }
+    public bool Used
+    {
+        get { return used; }
+        set { used = value; }
     }
 
 
