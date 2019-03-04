@@ -55,7 +55,7 @@ public class QuestionSet
             case 2:
                 this.category = Categories.BusinessSkills;
                 break;
-            case 3:
+            case 3: 
                 this.category = Categories.AboutFBLA;
                 break;
             case 4:
@@ -104,7 +104,7 @@ public class QuestionSet
                 break;
             default:
                 // Default get the question string
-                Debug.LogError("ERROR: Type Can Only Be From 0 - 5");
+                //Debug.LogError("ERROR: Type Can Only Be From 0 - 5");
 
                 list = QuestionDatabase.questions;
                 break;

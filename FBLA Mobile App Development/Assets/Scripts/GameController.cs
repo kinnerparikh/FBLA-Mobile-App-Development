@@ -57,20 +57,24 @@ public class GameController : MonoBehaviour
     public void Chosen1()
     {
         ChosenAnswer(1);
+        Debug.Log("ChosenAnswer(1)");
     }
     public void Chosen2()
     {
         ChosenAnswer(2);
+        Debug.Log("ChosenAnswer(2)");
     }
 
     public void Chosen3()
     {
         ChosenAnswer(3);
+        Debug.Log("ChosenAnswer(3)");
     }
 
     public void Chosen4()
     {
         ChosenAnswer(4);
+        Debug.Log("ChosenAnswer(4)");
     }
 
     private void ChosenAnswer(int a)
@@ -90,7 +94,7 @@ public class GameController : MonoBehaviour
     }
 
 
-    // Update is called once per frame
+    // Update is called ze per frame
     void Update()
     {
         // TO USE ====================
