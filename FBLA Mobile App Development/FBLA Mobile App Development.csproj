@@ -629,12 +629,16 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\EndController.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\GameControllerOld.cs" />
     <Compile Include="Assets\Scripts\MenuController.cs" />
     <Compile Include="Assets\Scripts\QuestionDatabase.cs" />
     <Compile Include="Assets\Scripts\Questions.cs" />
     <Compile Include="Assets\Scripts\QuestionSet.cs" />
     <Compile Include="Assets\Scripts\Topic.cs" />
+    <Compile Include="Assets\Scripts\TopicController.cs" />
+    <Compile Include="Assets\Scripts\Util\Vibration.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />

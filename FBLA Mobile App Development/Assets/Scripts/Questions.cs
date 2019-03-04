@@ -27,9 +27,7 @@ public static class Questions
         while (true)
         {
             System.Random rnd = new System.Random();
-            int randomQ = rnd.Next(0, CompetitveEvents.Count);
-
-            Debug.Log("Total Questions: " + CompetitveEvents.Count);
+            int randomQ = rnd.Next(0, QuestionDatabase.questions.Count);
 
             QuestionSet q = new QuestionSet(randomQ);
             if (q.Category == cat)

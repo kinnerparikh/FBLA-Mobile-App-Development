@@ -10,7 +10,16 @@ public class MenuController : MonoBehaviour
     * ===========================
     * This class controls the start scene
     */
-    
+    public void Start()
+    {
+        // Always run the following in order
+
+        // Imports questions to lists of strings from csv
+        QuestionDatabase.ImportGame("Test");
+        // Load all the strings into lists of Question Set Objects organized by categories
+        Questions.LoadAllQuestions();
+
+    }
     // Called when Start Button is Pressed
     public void StartGame()
     {

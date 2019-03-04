@@ -139,7 +139,7 @@ RectTransform:
   m_GameObject: {fileID: 106684595}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 9, z: 1}
+  m_LocalScale: {x: 10, y: 18, z: 1}
   m_Children: []
   m_Father: {fileID: 2057519286}
   m_RootOrder: 1
@@ -319,15 +319,16 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: SPIN
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d9b82d3a6bffd4942b64ac3244863243, type: 2}
+  m_sharedMaterial: {fileID: 21593430869537252, guid: d9b82d3a6bffd4942b64ac3244863243,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4283716692
+  m_fontColor: {r: 0.3301887, g: 0.3301887, b: 0.3301887, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -448,7 +449,7 @@ RectTransform:
   m_GameObject: {fileID: 1256111717}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.7, y: 2.7, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 0}
   m_Children:
   - {fileID: 914653293}
   m_Father: {fileID: 2057519286}
@@ -456,7 +457,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -383}
+  m_AnchoredPosition: {x: 0, y: -534.3}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1256111719
@@ -675,10 +676,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spinningWheel: {fileID: 106684595}
+  spinButton: {fileID: 1256111717}
   timeInterval: 0.01
   categoryText: {fileID: 1989775699}
-  spinWheelMin: 2000
-  spinWheelMax: 4500
+  spinWheelMin: 700
+  spinWheelMax: 2000
 --- !u!1 &1627538527
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,7 +708,7 @@ RectTransform:
   m_GameObject: {fileID: 1627538527}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 12, y: 12, z: 1}
+  m_LocalScale: {x: 12, y: 24, z: 1}
   m_Children: []
   m_Father: {fileID: 2057519286}
   m_RootOrder: 0
@@ -780,15 +782,15 @@ RectTransform:
   m_GameObject: {fileID: 1989775699}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 2057519286}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 312.52}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 20, y: 651}
+  m_SizeDelta: {x: 269.4, y: 85.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1989775701
 MonoBehaviour:
@@ -812,8 +814,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Click SPIN!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d9b82d3a6bffd4942b64ac3244863243, type: 2}
+  m_sharedMaterial: {fileID: 21593430869537252, guid: d9b82d3a6bffd4942b64ac3244863243,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

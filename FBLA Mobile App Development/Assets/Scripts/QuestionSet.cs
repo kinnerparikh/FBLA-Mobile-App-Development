@@ -109,8 +109,6 @@ public class QuestionSet
                 list = QuestionDatabase.questions;
                 break;
         }
-
-        Debug.Log(list);
         return list[question];
     }
 
