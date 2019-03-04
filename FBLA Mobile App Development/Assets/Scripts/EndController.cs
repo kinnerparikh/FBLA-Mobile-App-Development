@@ -15,10 +15,11 @@ public class EndController : MonoBehaviour
     void Start()
     {
         scoreText.GetComponent<TextMeshProUGUI>().text = "Score: " + GameController.numCorrect;
-        m_firstButton.onClick.AddListener(TaskOnClick);
+        m_firstButton.onClick.AddListener(ResetGame);
     }
 
-    void TaskOnClick()
+    // Resets game after a loss or after 10 questions answered correctly
+    void ResetGame()
     {
         SceneManager.LoadScene("Topic");
         GameController.numCorrect = 0;

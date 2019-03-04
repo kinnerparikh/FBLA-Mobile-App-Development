@@ -45,7 +45,7 @@ public class GameController : MonoBehaviour
     {
         // Get question based on the chosenTopic
         currentQNum++;
-        SetQuestion(Questions.GetQuestion(Topic.chosenTopic));
+        SetQuestion(Questions.ReturnQuestion(Topic.chosenTopic));
     }
 
     // 

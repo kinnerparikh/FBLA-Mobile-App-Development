@@ -50,7 +50,7 @@ public class GameControllerOld : MonoBehaviour
 
         // Get first question based on the chosenTopic
         currentQNum++;
-        SetQuestion(Questions.GetQuestion(Topic.chosenTopic));
+        SetQuestion(Questions.ReturnQuestion(Topic.chosenTopic));
     }
 
     // 
@@ -90,7 +90,7 @@ public class GameControllerOld : MonoBehaviour
             Debug.Log("Incorrect!! Correct choice is " + Int32.Parse(currentQuestion.Answer) + " you chose " + a);
             //Debug.Log("vibrate");
         }
-        SetQuestion(Questions.GetQuestion(Topic.chosenTopic));
+        SetQuestion(Questions.ReturnQuestion(Topic.chosenTopic));
     }
 
 
