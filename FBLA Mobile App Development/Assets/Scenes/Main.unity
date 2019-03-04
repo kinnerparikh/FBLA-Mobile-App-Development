@@ -456,7 +456,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 573406047}
-        m_MethodName: Choosed2
+        m_MethodName: Chosen2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1032,7 +1032,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 573406047}
-        m_MethodName: Choosed1
+        m_MethodName: Chosen1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1395,7 +1395,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 573406047}
-        m_MethodName: Choosed4
+        m_MethodName: Chosen4
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1524,7 +1524,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 573406047}
-        m_MethodName: Choosed3
+        m_MethodName: Chosen3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
