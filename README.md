@@ -10,7 +10,11 @@ Tesla STEM High School
 Team Members: An Doan, George Zhang, Kinner Parikh
 
 # Description
-*Fast Facts: FBLA* is a cross-platform mobile application that quizes users' knowledge with questions from five different categories related to Future Business Leaders of America (FBLA). Images of the graphic user interface can be found [here](http://github.com)
+*Fast Facts: FBLA* is a cross-platform mobile application that evaluates users' knowledge by presenting questions from five different categories related to Future Business Leaders of America (FBLA).
+
+Our goal for *Fast Facts: FBLA* is to provide a platform where future business leaders will be able to develop, improve, and test their grasp of skills necessary for success in their upcoming careers. While students are away from the computer and using their phone, they have the ability to open up our app and be entertained while remaining productive at the same time.
+
+We have developed many features with the focus on improving member experience and participation in FBLA. Through a user-friendly GUI and a clean look, *Fast Facts: FBLA* encourages students to actively participate and see how much they actually know about FBLA. Images of the graphic user interface can be found [here](http://github.com). Considering the immense reach of current social media platforms, our app allows user to share their score, creating a casual yet competitive environment, resulting in the increased involvement and understanding in FBLA of students around those who access the application.
 
 ## Requirements
 * iOS or Android Device 
