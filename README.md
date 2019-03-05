@@ -47,8 +47,8 @@ Attach any iOS device to your computer and click the play button at top left cor
 4. If you get a question right, you spin the wheel again
 5. If you get 10 questions right in a row, you win
 
-## Reporting Bugs + Contact
-By clicking on the question mark icon on the top right corner, a text pop-up explaining how to play the game will be displayed. On the bottom of the pop-up, there will be a button to report bugs or contact us for suggestions on the app.  
+## Reporting Bugs & Suggestions
+By clicking on the bug icon on the bottom right corner of the main screen, an interface will be displayed where you can submit bugs that you see or any suggestions.
 
 # Copyright
 ## Assets
@@ -58,9 +58,12 @@ By clicking on the question mark icon on the top right corner, a text pop-up exp
 * Business Icon made by Pixel perfect from www.flaticon.com
 * Events Icon made by Smashicons from www.flaticon.com
 * Share Icon made by Chanut from www.flaticon.com
+* Bug Icon made by Dave Gandy from www.flaticon.com
+
 ## APIs
 * [Native Share for Android & iOS API](https://assetstore.unity.com/packages/tools/integration/native-share-for-android-ios-112731) - By Süleyman Yasir Kula
 * [Vibration code](https://gist.github.com/munkbusiness/9e0a7d41bb9c0eb229fd8f2313941564) - munkbusiness on GitHub
+* [Trello Bug Tracker [PRO] Asset](https://assetstore.unity.com/packages/tools/integration/trello-bug-tracker-pro-75613) - Diegod Games
 
 # Developer's Note
 ## Created With
@@ -68,5 +71,3 @@ By clicking on the question mark icon on the top right corner, a text pop-up exp
 * C#
 * Graphics - Photoshop
 * Music - GarageBand
-
-Ok, now this is epic
