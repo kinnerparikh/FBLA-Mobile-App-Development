@@ -48,7 +48,11 @@ public class GameController : MonoBehaviour
         // Get question based on the chosenTopic
         currentQNum++;
         SetQuestion(Questions.ReturnQuestion(Topic.chosenTopic));
+<<<<<<< Updated upstream
 
+=======
+        //FindObjectOfType<MusicManager>().Play("Gameplay");
+>>>>>>> Stashed changes
     }
 
     // 
@@ -80,6 +84,7 @@ public class GameController : MonoBehaviour
             Vibration.CreateOneShot(200);
             Debug.Log("Incorrect!! Correct choice is " + Int32.Parse(currentQuestion.Answer) + " you chose " + a);
             didLose = true;
+            FindObjectOfType<MusicManager>().Play("Incorrect");
             //Debug.Log("vibrate");
         }
         GetButtonImage(Int32.Parse(currentQuestion.Answer)).color = Color.green;
@@ -87,6 +92,7 @@ public class GameController : MonoBehaviour
         {
             numCorrect++;
             Debug.Log("Correct!!");
+            FindObjectOfType<MusicManager>().Play("Correct");
         }
 
         choice1Text.GetComponentInParent<Button>().enabled = false;

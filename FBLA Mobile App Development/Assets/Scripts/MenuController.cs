@@ -19,6 +19,10 @@ public class MenuController : MonoBehaviour
         // Load all the strings into lists of Question Set Objects organized by categories
         Questions.LoadAllQuestions();
 
+        FindObjectOfType<MusicManager>().Stop("Gameplay");
+        FindObjectOfType<MusicManager>().Stop("ThemeSong");
+        FindObjectOfType<MusicManager>().Play("ThemeSong");
+
     }
     // Called when Start Button is Pressed
     public void StartGame()

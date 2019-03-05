@@ -24,6 +24,13 @@ public class TopicController : MonoBehaviour
     [SerializeField]
     private int spinWheelMax = 1000;
 
+    private void Start()
+    {
+        FindObjectOfType<MusicManager>().Stop("Gameplay");
+        FindObjectOfType<MusicManager>().Stop("ThemeSong");
+        FindObjectOfType<MusicManager>().Play("Gameplay");
+    }
+
     public void Spin()
     {
         StartCoroutine(SpinWheel());
