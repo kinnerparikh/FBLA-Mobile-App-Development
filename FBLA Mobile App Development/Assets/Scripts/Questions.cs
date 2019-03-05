@@ -21,41 +21,41 @@ public static class Questions
     public static List<QuestionSet> NationalOfficers;
 
     public static int QuestionCount = 0;
-    public static List<QuestionSet> questionsUsed = new List<QuestionSet>();
+    //public static List<QuestionSet> questionsUsed = new List<QuestionSet>();
 
     public static QuestionSet ReturnQuestion(QuestionSet.Categories cat)
     {
-        bool used = false;
+        //bool used = false;
 
         while (true)
         {
-            used = false; 
+            //used = false; 
             System.Random rnd = new System.Random();
             int randomQ = rnd.Next(0, QuestionDatabase.questions.Count);
 
             QuestionSet q = new QuestionSet(randomQ);
             
-            for (int i = 0; i < questionsUsed.Count; i++)
+            /*for (int i = 0; i < questionsUsed.Count; i++)
             {
                 if (questionsUsed[i].Equals(q))
                 {
                     q = null;
                     used = true;
                 }
-            }
+            }*/
 
-            if (!used)
-            {
+            //if (!used)
+            //{
                 if (q.Category == cat)
                 {
                     return q;
-                    questionsUsed.Add(q);
+                    //questionsUsed.Add(q);
                 }
                 else
                 {
                     q = null;
                 }
-            }
+            //}
         }
     }
     

@@ -29,8 +29,8 @@ public class GameController : MonoBehaviour
     private GameObject choice3Text;
     [SerializeField]
     private GameObject choice4Text;
-
-
+    [SerializeField]
+    private GameObject timeText;
 
     // Current Question
     private int currentQNum = 0;
@@ -38,6 +38,8 @@ public class GameController : MonoBehaviour
 
     // Stats
     public static int numCorrect = 0;
+
+    float currCountdownValue;
   
 
     // Start of program
@@ -46,6 +48,7 @@ public class GameController : MonoBehaviour
         // Get question based on the chosenTopic
         currentQNum++;
         SetQuestion(Questions.ReturnQuestion(Topic.chosenTopic));
+
     }
 
     // 
@@ -118,7 +121,9 @@ public class GameController : MonoBehaviour
     IEnumerator ExecuteAfterTime(float time, bool didLose)
     {
         // 10 second delay
+        Debug.Log("Timer Started");
         yield return new WaitForSeconds(time);
+        Debug.Log("Timer Finished");
 
         // if you get 10 questions right, turn to end screen
         if (numCorrect == 10 || didLose) 
@@ -126,6 +131,18 @@ public class GameController : MonoBehaviour
         // else, continue to play
         else
             SceneManager.LoadScene("Topic");
+    }
+
+    public IEnumerator StartCountdown(float countdownValue = 15)
+    {
+        currCountdownValue = countdownValue;
+        while (currCountdownValue > 0)
+        {
+            Debug.Log("Countdown: " + currCountdownValue);
+            yield return new WaitForSeconds(1.0f);
+            timeText.GetComponent<TextMeshProUGUI>().text = "Time: " + countdownValue;
+            currCountdownValue--;
+        }
     }
 
     // Update is called once per frame
