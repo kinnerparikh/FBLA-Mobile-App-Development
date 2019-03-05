@@ -57,15 +57,16 @@ By clicking on the question mark icon on the top right corner, a text pop-up exp
 * History Icon made by Hadrien from www.flaticon.com
 * Business Icon made by Pixel perfect from www.flaticon.com
 * Events Icon made by Smashicons from www.flaticon.com
-* Facebook Icon made by Freepik from www.flaticon.com
-* Twitter Icon made by Freepik from www.flaticon.com
- 
+* Share Icon made by Chanut from www.flaticon.com
+## APIs
+* [Native Share for Android & iOS API](https://assetstore.unity.com/packages/tools/integration/native-share-for-android-ios-112731) - By Süleyman Yasir Kula
+* [Vibration code](https://gist.github.com/munkbusiness/9e0a7d41bb9c0eb229fd8f2313941564) - munkbusiness on GitHub
 
 # Developer's Note
 ## Created With
 * Unity
 * C#
 * Graphics - Photoshop
-* Music - Garage Bang
+* Music - GarageBand
 
 Ok, now this is epic
