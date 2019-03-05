@@ -48,11 +48,6 @@ public class GameController : MonoBehaviour
         // Get question based on the chosenTopic
         currentQNum++;
         SetQuestion(Questions.ReturnQuestion(Topic.chosenTopic));
-<<<<<<< Updated upstream
-
-=======
-        //FindObjectOfType<MusicManager>().Play("Gameplay");
->>>>>>> Stashed changes
     }
 
     // 

@@ -3,20 +3,23 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41c7f888198b7824c971f28883c2a36d, type: 3}
   m_Name: TrelloPosterExample
   m_EditorClassIdentifier: 
-  key: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-  token: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-  boardId: XXXXXXXXXXXXXXXXXXXXXXXX
+  key: b181f82166ab556fa2adb5b5474c705e
+  token: 6870527e70989a00e84446f54d6e7ad5823e10a5d462950ed77e81d7c5eb0728
+  boardId: 5c7dfa54424cec768d60d566
   cardLists:
-  - name: Card List Name
-    id: XXXXXXXXXXXXXXXXXXXXXXXX
+  - name: Bugs
+    id: 5c7dfa55c5768e274633adda
+  - name: Suggestions
+    id: 5c7dfadc94278a6642d303c9
   cardLabels:
-  - name: Card Label Name
-    id: XXXXXXXXXXXXXXXXXXXXXXXX
+  - name: orange
+    id: 5c7dfa54424cec768d60d566
