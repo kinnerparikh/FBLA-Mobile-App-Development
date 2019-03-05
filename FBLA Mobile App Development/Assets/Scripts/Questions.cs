@@ -25,6 +25,7 @@ public static class Questions
 
     public static QuestionSet ReturnQuestion(QuestionSet.Categories cat)
     {
+<<<<<<< HEAD
         //bool used = false;
 
         while (true)
@@ -56,6 +57,46 @@ public static class Questions
                     q = null;
                 }
             //}
+=======
+
+
+        while (true)
+        {
+            List<QuestionSet> qList;
+
+            if (cat == QuestionSet.Categories.AboutFBLA)
+            {
+                qList = AboutFBLA;
+            }
+            else if (cat == QuestionSet.Categories.BusinessSkills)
+            {
+                qList = BusinessSkills;
+            }
+            else if (cat == QuestionSet.Categories.CompetitveEvents)
+            {
+                qList = CompetitveEvents;
+            }
+            else if (cat == QuestionSet.Categories.FBLAHistory)
+            {
+                qList = FBLAHistory;
+            }
+            else
+            {
+                qList = NationalOfficers;
+            }
+
+            System.Random rnd = new System.Random();
+            int randomQ = rnd.Next(0, qList.Count - 1);
+
+            QuestionSet q = qList[randomQ];
+
+            if (q.Used == false)
+            {
+                q.Used = true;
+                questionsUsed.Add(q);
+                return q;
+            }
+>>>>>>> master
         }
     }
     
