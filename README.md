@@ -38,9 +38,7 @@ Click the play button at top left corner of Xcode. When selecting a device, sele
 **Running on physical iPhone**
 Attach any iOS device to your computer and click the play button at top left corner of Xcode. When selecting a device, choose the device that is attached to your computer. If your device is prompted to allow the app to run, accept all prompts. 
 
-# Use 
-## Why Fast Facts: FBLA?
-<Correlation here>
+# Use
   
 ## How To Play
 1. Spin the wheel to receive a question from one of five categories
