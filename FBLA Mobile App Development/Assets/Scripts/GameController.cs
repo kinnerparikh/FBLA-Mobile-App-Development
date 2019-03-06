@@ -31,13 +31,16 @@ public class GameController : MonoBehaviour
     private GameObject choice4Text;
     [SerializeField]
     private GameObject timeText;
+    [SerializeField]
+    private GameObject scoreText;
 
     // Current Question
     private int currentQNum = 0;
     private QuestionSet currentQuestion;
-
+    
     // Stats
     public static int numCorrect = 0;
+    
 
     // How much time is left in the timer
     float currCountdownValue;
@@ -48,6 +51,7 @@ public class GameController : MonoBehaviour
     // Start of program
     void Start()
     {
+        scoreText.GetComponent<Text>().text = "Score: " + numCorrect;
         // Get question based on the chosenTopic
         currentQNum++;
         SetQuestion(Questions.ReturnQuestion(Topic.chosenTopic));
@@ -116,6 +120,8 @@ public class GameController : MonoBehaviour
             FindObjectOfType<MusicManager>().Play("Correct");
         }
 
+        scoreText.GetComponent<Text>().text = "Score: " + numCorrect;
+
         // Disable all buttons
         choice1Text.GetComponentInParent<Button>().enabled = false;
         choice2Text.GetComponentInParent<Button>().enabled = false;
@@ -171,14 +177,14 @@ public class GameController : MonoBehaviour
         while (currCountdownValue > 0 && timerRun)
         {
             Debug.Log("Countdown: " + currCountdownValue);
-            timeText.GetComponent<TextMeshProUGUI>().text = "Time: " + currCountdownValue;
+            timeText.GetComponent<Text>().text = "Time: " + currCountdownValue;
             yield return new WaitForSeconds(1.0f);
             currCountdownValue--;
         }
 
         if (timerRun)
         {
-            timeText.GetComponent<TextMeshProUGUI>().text = "Time: " + currCountdownValue;
+            timeText.GetComponent<Text>().text = "Time: " + currCountdownValue;
             ChosenAnswer(-1);
         }
     }
