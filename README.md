@@ -3,18 +3,16 @@
 </p>
 
 # Fast Facts: FBLA
-FBLA Mobile App Development 2018 - 2019
-
-Tesla STEM High School
-
-Team Members: An Doan, George Zhang, Kinner Parikh
+### FBLA Mobile App Development 2018 - 2019
+### Tesla STEM High School
+### Team Members: An Doan, George Zhang, Kinner Parikh
 
 # Description
-*Fast Facts: FBLA* is a cross-platform mobile application that evaluates users' knowledge by presenting questions from five different categories related to Future Business Leaders of America (FBLA).
+**Fast Facts: FBLA** is a cross-platform mobile application that evaluates users' knowledge by presenting questions from five different categories related to Future Business Leaders of America (FBLA).
 
 Our goal for *Fast Facts: FBLA* is to provide a platform where future business leaders will be able to develop, improve, and test their grasp of skills necessary for success in their upcoming careers. While students are away from the computer and using their phone, they have the ability to open up our app and be entertained while remaining productive at the same time.
 
-We have developed many features with the focus on improving member experience and participation in FBLA. Through a user-friendly GUI and a clean look, *Fast Facts: FBLA* encourages students to actively participate and see how much they actually know about FBLA. Images of the graphic user interface can be found [here](http://github.com). Considering the immense reach of current social media platforms, our app allows user to share their score, creating a casual yet competitive environment, resulting in the increased involvement and understanding in FBLA of students around those who access the application.
+We have developed many features with the focus on improving member experience and participation in FBLA. Through a user-friendly GUI and a clean look, *Fast Facts: FBLA* encourages students to actively participate and see how much they actually know about FBLA. Images of the graphic user interface can be found [here](https://github.com/kinzorPark/FBLA-Mobile-App-Development/blob/master/GUI.pdf). Considering the immense reach of current social media platforms, our app allows user to share their score, creating a casual yet competitive environment, resulting in the increased involvement and understanding in FBLA of students around those who access the application.
 
 ## Requirements
 * iOS or Android Device 
@@ -24,7 +22,7 @@ We have developed many features with the focus on improving member experience an
 Here is how to install *Fast Facts: FBLA* on both Android and iOS
 
 ## Android - APK
-1. Find the .APK file name *Fast Facts: FBLA* found in the [here] (https://github.com/kinzorPark/FBLA-Mobile-App-Development/blob/master/Builds/Fast%20Fact%20FBLA.apk)
+1. Find the .APK file name *Fast Facts: FBLA* found in the [here](https://github.com/kinzorPark/FBLA-Mobile-App-Development/blob/master/Builds/Fast%20Fact%20FBLA.apk)
 2. Download the .APK file onto your android device. 
 3. Run the .APK file on your device to install the app onto your device. 
 
@@ -52,13 +50,13 @@ By clicking on the bug icon on the bottom right corner of the main screen, an in
 
 # Copyright
 ## Assets
-* Officer Icon made by Freepik from www.flaticon.com
-* About FBLA Icon made by Freepik from www.flaticon.com
-* History Icon made by Hadrien from www.flaticon.com
-* Business Icon made by Pixel perfect from www.flaticon.com
-* Events Icon made by Smashicons from www.flaticon.com
-* Share Icon made by Chanut from www.flaticon.com
-* Bug Icon made by Dave Gandy from www.flaticon.com
+* Officer Icon made by [Freepik](https://www.freepik.com/) from www.flaticon.com
+* About FBLA Icon made by [Freepik](https://www.freepik.com/) from www.flaticon.com
+* History Icon made by [Hadrien](https://hadrien.co/) from www.flaticon.com
+* Business Icon made by [Pixel Perfect](https://icon54.com/) from www.flaticon.com
+* Events Icon made by [Smashicons](https://smashicons.com/) from www.flaticon.com
+* Share Icon made by [Chanut](https://www.flaticon.com/authors/chanut) from www.flaticon.com
+* Bug Icon made by [Dave Gandy](https://fontawesome.com/?from=io) from www.flaticon.com
 
 ## APIs
 * [Native Share for Android & iOS API](https://assetstore.unity.com/packages/tools/integration/native-share-for-android-ios-112731) - By Süleyman Yasir Kula
