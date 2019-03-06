@@ -29,7 +29,7 @@ public class MenuController : MonoBehaviour
         // Always run the following in order
 
         // Imports questions to lists of strings from csv
-        QuestionDatabase.ImportGame("Test");
+        QuestionDatabase.ImportGame("final");
         // Load all the strings into lists of Question Set Objects organized by categories
         Questions.LoadAllQuestions();
 

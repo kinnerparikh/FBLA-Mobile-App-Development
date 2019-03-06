@@ -41,7 +41,9 @@ public class GameController : MonoBehaviour
 
     // How much time is left in the timer
     float currCountdownValue;
-  
+
+    // Is the timer running?
+    private bool timerRun = true;
 
     // Start of program
     void Start()
@@ -49,6 +51,8 @@ public class GameController : MonoBehaviour
         // Get question based on the chosenTopic
         currentQNum++;
         SetQuestion(Questions.ReturnQuestion(Topic.chosenTopic));
+
+        StartCoroutine(StartCountdown());
     }
 
     // Called when 1st button is clicked
@@ -78,13 +82,21 @@ public class GameController : MonoBehaviour
     //Logic for when an answer is chosen
     private void ChosenAnswer(int a)
     {
+        timerRun = false;
         //Did you select the correct answer?
         bool didLose = false;
+        if (a == -1)
+        {
+            for (int i = 1; i <= 4; i++)
+                GetButtonImage(i).color = Color.red;
+
+            didLose = true;
+            FindObjectOfType<MusicManager>().Play("Incorrect");
+        }
 
         //if answer is wrong
         if (Int32.Parse(currentQuestion.Answer) != a)
         {
-            //
             GetButtonImage(a).color = Color.red; 
             Vibration.CreateOneShot(200);
             //Debug.Log("Incorrect!! Correct choice is " + Int32.Parse(currentQuestion.Answer) + " you chose " + a);
@@ -155,19 +167,22 @@ public class GameController : MonoBehaviour
         // Update the current countdown value
         currCountdownValue = countdownValue;
 
-        // While timer is not done
-        while (currCountdownValue > 0)
+        // While timer is running
+        while (currCountdownValue > 0 && timerRun)
         {
-            //Debug.Log("Countdown: " + currCountdownValue);
-
-            // Wait 1 second
+            Debug.Log("Countdown: " + currCountdownValue);
+            timeText.GetComponent<TextMeshProUGUI>().text = "Time: " + currCountdownValue;
             yield return new WaitForSeconds(1.0f);
-
-            // Decrease current countdown value and update time text in UI 
-            timeText.GetComponent<TextMeshProUGUI>().text = "Time: " + countdownValue;
             currCountdownValue--;
         }
+
+        if (timerRun)
+        {
+            timeText.GetComponent<TextMeshProUGUI>().text = "Time: " + currCountdownValue;
+            ChosenAnswer(-1);
+        }
     }
+    
 
     // Update is called once per frame
     void Update()
