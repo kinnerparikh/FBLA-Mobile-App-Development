@@ -1,19 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System;
 using UnityEngine;
+
+/* ===========================
+* Question Set Class
+* ===========================
+* 
+* Data structure for storing a set of questions
+* Contains the questions, choices, and answer in string
+* Also contains the type of question in an enum (Categories)
+* 
+*/
 public class QuestionSet
 {
-
-    /* ===========================
-    * Question Set Class
-    * ===========================
-    * 
-    * Data structure for storing a set of questions
-    * Contains the questions, choices, and answer in string
-    * Also contains the type of question in an enum (Categories)
-    * 
-    */
     private string question;
     private string choice1;
     private string choice2;
@@ -36,16 +35,16 @@ public class QuestionSet
 
     // Constructor for creating a questions
     // No need for user to call this function, used by the static Questions Class
-    public QuestionSet (int question)
+    public QuestionSet (int q)
     {
         // Load Question set
-        this.Question = load(question, 0);
-        this.Choice1 = load(question, 1);
-        this.Choice2 = load(question, 2);
-        this.Choice3 = load(question, 3);
-        this.Choice4 = load(question, 4);
-        this.Answer = load(question, 5);
-        String stringCat = load(question, 6);
+        this.Question = load(q, 0);
+        this.Choice1 = load(q, 1);
+        this.Choice2 = load(q, 2);
+        this.Choice3 = load(q, 3);
+        this.Choice4 = load(q, 4);
+        this.Answer = load(q, 5);
+        String stringCat = load(q, 6);
 
         // Set category from integer
         switch (Convert.ToInt32(stringCat))
@@ -76,7 +75,7 @@ public class QuestionSet
     
 
     // Used to return string from the lists in the Question Database
-    private string load(int question, int type)
+    private string load(int q, int type)
     {
 
         List<string> list = new List<string>();
@@ -110,7 +109,7 @@ public class QuestionSet
                 list = QuestionDatabase.questions;
                 break;
         }
-        return list[question];
+        return list[q];
     }
 
     // Getters and Setters

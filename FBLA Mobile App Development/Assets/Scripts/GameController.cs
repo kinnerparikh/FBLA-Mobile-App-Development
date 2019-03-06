@@ -39,6 +39,7 @@ public class GameController : MonoBehaviour
     // Stats
     public static int numCorrect = 0;
 
+    // How much time is left in the timer
     float currCountdownValue;
   
 
@@ -50,39 +51,52 @@ public class GameController : MonoBehaviour
         SetQuestion(Questions.ReturnQuestion(Topic.chosenTopic));
     }
 
-    // 
+    // Called when 1st button is clicked
     public void Chosen1()
     {
         ChosenAnswer(1);
     }
+
+    // Called when 2nd button is clicked
     public void Chosen2()
     {
         ChosenAnswer(2);
     }
 
+    // Called when 3rd button is clicked
     public void Chosen3()
     {
         ChosenAnswer(3);
     }
 
+    // Called when 4th button is clicked
     public void Chosen4()
     {
         ChosenAnswer(4);
     }
 
+    //Logic for when an answer is chosen
     private void ChosenAnswer(int a)
     {
+        //Did you select the correct answer?
         bool didLose = false;
+
+        //if answer is wrong
         if (Int32.Parse(currentQuestion.Answer) != a)
         {
+            //
             GetButtonImage(a).color = Color.red; 
             Vibration.CreateOneShot(200);
-            Debug.Log("Incorrect!! Correct choice is " + Int32.Parse(currentQuestion.Answer) + " you chose " + a);
+            //Debug.Log("Incorrect!! Correct choice is " + Int32.Parse(currentQuestion.Answer) + " you chose " + a);
             didLose = true;
             FindObjectOfType<MusicManager>().Play("Incorrect");
             //Debug.Log("vibrate");
         }
+
+        // Set correct answer button to green
         GetButtonImage(Int32.Parse(currentQuestion.Answer)).color = Color.green;
+
+        // If answer is correct 
         if (Int32.Parse(currentQuestion.Answer) == a)
         {
             numCorrect++;
@@ -90,16 +104,17 @@ public class GameController : MonoBehaviour
             FindObjectOfType<MusicManager>().Play("Correct");
         }
 
+        // Disable all buttons
         choice1Text.GetComponentInParent<Button>().enabled = false;
         choice2Text.GetComponentInParent<Button>().enabled = false;
         choice3Text.GetComponentInParent<Button>().enabled = false;
         choice4Text.GetComponentInParent<Button>().enabled = false;
 
-        StartCoroutine(ExecuteAfterTime(2, didLose));
+        StartCoroutine(LoadEnd(2, didLose));
         //SetQuestion(Questions.GetQuestion(Topic.chosenTopic));
     }
 
-    //Get image of the button based on which question you selected (a = 1-4)
+    // Get image of the button based on which question you selected (a = 1-4)
     private Image GetButtonImage(int a)
     {
         switch (a)
@@ -118,8 +133,8 @@ public class GameController : MonoBehaviour
         }
     }
 
-
-    IEnumerator ExecuteAfterTime(float time, bool didLose)
+    // Loads appropriate scene based on "didLose" and/or "score" 
+    IEnumerator LoadEnd(float time, bool didLose)
     {
         // 10 second delay
         Debug.Log("Timer Started");
@@ -134,13 +149,21 @@ public class GameController : MonoBehaviour
             SceneManager.LoadScene("Topic");
     }
 
+    // Start 15 second countdown
     public IEnumerator StartCountdown(float countdownValue = 15)
     {
+        // Update the current countdown value
         currCountdownValue = countdownValue;
+
+        // While timer is not done
         while (currCountdownValue > 0)
         {
-            Debug.Log("Countdown: " + currCountdownValue);
+            //Debug.Log("Countdown: " + currCountdownValue);
+
+            // Wait 1 second
             yield return new WaitForSeconds(1.0f);
+
+            // Decrease current countdown value and update time text in UI 
             timeText.GetComponent<TextMeshProUGUI>().text = "Time: " + countdownValue;
             currCountdownValue--;
         }

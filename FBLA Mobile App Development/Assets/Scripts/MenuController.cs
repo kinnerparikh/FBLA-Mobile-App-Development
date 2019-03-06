@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
 {
@@ -10,6 +11,19 @@ public class MenuController : MonoBehaviour
     * ===========================
     * This class controls the start scene
     */
+
+    [SerializeField]
+    private GameObject startButton;
+    [SerializeField]
+    private GameObject instructionsButton;
+    [SerializeField]
+    private GameObject creditsButton;
+
+    [SerializeField]
+    private GameObject bugMenu;
+
+
+
     public void Start()
     {
         // Always run the following in order
@@ -29,5 +43,35 @@ public class MenuController : MonoBehaviour
     {
         // Load the Scene to choose topic
         SceneManager.LoadScene("Topic");
+    }
+
+    // Called when Instructions button is Pressed
+    public void Instructions()
+    {
+        // Open Instructions Scene
+        SceneManager.LoadScene("Instructions");
+    }
+
+    // Called when Credits button is Pressed
+    public void Credits()
+    {
+        // Open Credits Scene
+        SceneManager.LoadScene("Credits");
+    }
+
+    private void Update()
+    {
+        if (bugMenu.activeSelf == true)
+        {
+            startButton.GetComponent<Button>().enabled = false;
+            creditsButton.GetComponent<Button>().enabled = false;
+            instructionsButton.GetComponent<Button>().enabled = false;
+        }
+        else
+        {
+            startButton.GetComponent<Button>().enabled = true;
+            creditsButton.GetComponent<Button>().enabled = true;
+            instructionsButton.GetComponent<Button>().enabled = true;
+        }
     }
 }

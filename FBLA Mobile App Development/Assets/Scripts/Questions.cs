@@ -1,11 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-public static class Questions
-{
-    /* ===========================
+/* ===========================
     * Questions Class
     * ===========================
     * Stores all questions in lists based on its categories for easy access by the user
@@ -13,24 +9,31 @@ public static class Questions
     * ALWAYS run LoadAllQuestions to load the questions in to the lists (run this after SetTotalQuestions)
     * 
     */
-    // Stores all questions in lists based on its categories
+// Stores all questions in lists based on its categories
+public static class Questions
+{
+    // List of all question categories 
     public static List<QuestionSet> CompetitveEvents;
     public static List<QuestionSet> BusinessSkills;
     public static List<QuestionSet> AboutFBLA;
     public static List<QuestionSet> FBLAHistory;
     public static List<QuestionSet> NationalOfficers;
 
+    // Number of questions answered so far 
     public static int QuestionCount = 0;
+
+    // Questions that have been played already
     public static List<QuestionSet> questionsUsed = new List<QuestionSet>();
 
+    // Return a new question from the category
     public static QuestionSet ReturnQuestion(QuestionSet.Categories cat)
     {
-
 
         while (true)
         {
             List<QuestionSet> qList;
 
+            // Find the category list 
             if (cat == QuestionSet.Categories.AboutFBLA)
             {
                 qList = AboutFBLA;
@@ -52,11 +55,13 @@ public static class Questions
                 qList = NationalOfficers;
             }
 
+            // Randomly select a question from the category
             System.Random rnd = new System.Random();
             int randomQ = rnd.Next(0, qList.Count - 1);
 
             QuestionSet q = qList[randomQ];
 
+            // Add that question to questions 
             if (q.Used == false)
             {
                 q.Used = true;
@@ -66,17 +71,17 @@ public static class Questions
         }
     }
 
-
+    // Load all questions from the database
     public static void LoadAllQuestions()
     {
-
+        // Initialize lists for categories
         CompetitveEvents = new List<QuestionSet>();
         BusinessSkills = new List<QuestionSet>();
         AboutFBLA = new List<QuestionSet>();
         FBLAHistory = new List<QuestionSet>();
         NationalOfficers = new List<QuestionSet>();
 
-        // Loop Through All to load all the questions into the list
+        // Loop through all to load all the questions into the list
         for (int i = 0; i < QuestionDatabase.questions.Count; i++)
         {
             QuestionSet q = new QuestionSet(i);
@@ -103,6 +108,6 @@ public static class Questions
             }
         }
 
-        Debug.Log("Loaded Questions");
+        //Debug.Log("Loaded Questions");
     }
 }

@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using System.IO;
-
 
 /* ===========================
  * Question Database Class
@@ -18,7 +15,7 @@ using System.IO;
  * FBLAHistory = 4
  * NationalOfficers = 5
  * 
- * IMPORTANT: At the start of program, run import game function with parameter of CSV file path
+ * IMPORTANT: At the start of program, run import game function with parameter of text file path
  * 
  */
 public static class QuestionDatabase
@@ -38,8 +35,10 @@ public static class QuestionDatabase
         TextAsset qs = Resources.Load<TextAsset>(path);
         //Debug.Log(qs.text);
 
+        // Split lines for each question
         string[] data = qs.text.Split('\n');
 
+        // Initialize all lists
         questions = new List<string>();
         choice1s = new List<string>();
         choice2s = new List<string>();
@@ -48,12 +47,15 @@ public static class QuestionDatabase
         answers = new List<string>();
         categories = new List<string>();
 
+        //Debug.Log("Total Questions: " + data.Length);
 
-        Debug.Log("Total Questions: " + data.Length);
+        // Go through each question and add it
         for (int i = 1; i < data.Length - 1; i++)
         {
-            string[] row = data[i].Split(new char[] {','});
+            // Using | as a delimiter
+            string[] row = data[i].Split('|');
 
+            // Add all question components
             questions.Add(row[0].ToString());
             choice1s.Add(row[1].ToString());
             choice2s.Add(row[2].ToString());
