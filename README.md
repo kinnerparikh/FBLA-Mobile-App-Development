@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/kinzorPark/FBLA-Mobile-App-Development/blob/master/FBLA%20Mobile%20App%20Development/Assets/Images/Thumbnail.png" alt="Fast Facts: FBLA Icon" width=300>
+<img src="https://github.com/kinzorPark/FBLA-Mobile-App-Development/blob/master/FBLA%20Mobile%20App%20Development/Assets/Images/icon.png" alt="Fast Facts: FBLA Icon" width=300>
 </p>
 
 # Fast Facts: FBLA
