@@ -27,6 +27,7 @@ Here is how to install *Fast Facts: FBLA* on both Android and iOS
 3. Run the .APK file on your device to install the app onto your device. 
 
 ## IOS
+### AS OF NOW, OUR APP CANNOT SUPPORT IOS! COMING SOON IN SPRING OF 2019
 1. Download Xcode project [here](http://github.com)
 2. Open the Xcode Project ".xcodeproj".
 
