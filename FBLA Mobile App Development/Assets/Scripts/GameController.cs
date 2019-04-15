@@ -95,7 +95,9 @@ public class GameController : MonoBehaviour
                 GetButtonImage(i).color = Color.red;
 
             didLose = true;
+            GetButtonImage(Int32.Parse(currentQuestion.Answer)).color = Color.green;
             FindObjectOfType<MusicManager>().Play("Incorrect");
+            StartCoroutine(LoadEnd(2, didLose));
         }
 
         //if answer is wrong
@@ -185,6 +187,13 @@ public class GameController : MonoBehaviour
         if (timerRun)
         {
             timeText.GetComponent<Text>().text = "Time: " + currCountdownValue;
+
+            choice1Text.GetComponentInParent<Button>().enabled = false;
+            choice2Text.GetComponentInParent<Button>().enabled = false;
+            choice3Text.GetComponentInParent<Button>().enabled = false;
+            choice4Text.GetComponentInParent<Button>().enabled = false;
+
+
             ChosenAnswer(-1);
         }
     }
