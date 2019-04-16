@@ -40,6 +40,7 @@ public class GameController : MonoBehaviour
     
     // Stats
     public static int numCorrect = 0;
+    public static double playerScore = 0;
     
 
     // How much time is left in the timer
@@ -118,6 +119,7 @@ public class GameController : MonoBehaviour
         if (Int32.Parse(currentQuestion.Answer) == a)
         {
             numCorrect++;
+            //Score();
             Debug.Log("Correct!!");
             FindObjectOfType<MusicManager>().Play("Correct");
         }
@@ -197,7 +199,9 @@ public class GameController : MonoBehaviour
             ChosenAnswer(-1);
         }
     }
-    
+
+
+
 
     // Update is called once per frame
     void Update()

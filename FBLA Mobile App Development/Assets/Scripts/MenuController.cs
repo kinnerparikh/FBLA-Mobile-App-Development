@@ -21,7 +21,6 @@ public class MenuController : MonoBehaviour
     private GameObject instructionsButton;
     [SerializeField]
     private GameObject creditsButton;
-
     [SerializeField]
     private GameObject bugMenu;
 

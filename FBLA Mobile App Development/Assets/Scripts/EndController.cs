@@ -9,7 +9,7 @@ public class EndController : MonoBehaviour
 {
     [SerializeField]
     private GameObject scoreText;
-
+    [SerializeField]
     public GameObject highScore;
 
     public Button m_firstButton;
