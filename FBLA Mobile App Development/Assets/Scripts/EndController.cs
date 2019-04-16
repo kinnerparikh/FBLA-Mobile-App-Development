@@ -12,10 +12,13 @@ public class EndController : MonoBehaviour
 
     public Button m_firstButton;
 
+    public Text highScore;
+
     void Start()
     {
         scoreText.GetComponent<TextMeshProUGUI>().text = "Score: " + GameController.numCorrect;
         m_firstButton.onClick.AddListener(ResetGame);
+        HighScore(GameController.numCorrect);
         FindObjectOfType<MusicManager>().Stop("Gameplay");
         FindObjectOfType<MusicManager>().Stop("ThemeSong");
         FindObjectOfType<MusicManager>().Play("ThemeSong");
@@ -39,5 +42,19 @@ public class EndController : MonoBehaviour
         ns.SetText("I Just GOT " + GameController.numCorrect + "/10 on the Fast Facts: FBLA QUIZ!! \n" +
             "https://github.com/kinzorPark/FBLA-Mobile-App-Development");
         ns.Share();
+    }
+
+    public void HighScore(int currScore)
+    {
+        if (currScore > PlayerPrefs.GetInt("highScore", 0))
+        {
+            Debug.Log("High Score updated from " + PlayerPrefs.GetInt("highScore", 0) + " to " + currScore);
+            PlayerPrefs.SetInt("highScore", currScore);
+        }
+
+        else
+        {
+            Debug.Log("High Score stays same");
+        }
     }
 }

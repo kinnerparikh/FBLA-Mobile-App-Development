@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+//static bool AudioBegin = false;
+
+
 public class MenuController : MonoBehaviour
 {
     /* ===========================
@@ -33,6 +36,7 @@ public class MenuController : MonoBehaviour
         // Load all the strings into lists of Question Set Objects organized by categories
         Questions.LoadAllQuestions();
 
+        
         FindObjectOfType<MusicManager>().Stop("Gameplay");
         FindObjectOfType<MusicManager>().Stop("ThemeSong");
         FindObjectOfType<MusicManager>().Play("ThemeSong");
@@ -74,4 +78,13 @@ public class MenuController : MonoBehaviour
             instructionsButton.GetComponent<Button>().enabled = true;
         }
     }
+
+    /*public class menuMusic : MonoBehaviour
+    {
+        private void Awake()
+        {
+            if (!AudioBegin)
+
+        }
+    }*/
 }
