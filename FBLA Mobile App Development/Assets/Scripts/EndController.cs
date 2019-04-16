@@ -10,9 +10,10 @@ public class EndController : MonoBehaviour
     [SerializeField]
     private GameObject scoreText;
 
+    public GameObject highScore;
+
     public Button m_firstButton;
 
-    public Text highScore;
 
     void Start()
     {
@@ -54,7 +55,9 @@ public class EndController : MonoBehaviour
 
         else
         {
-            Debug.Log("High Score stays same");
+            Debug.Log("High Score stays same: " + PlayerPrefs.GetInt("highScore", 0));
         }
+
+        highScore.GetComponent<TextMeshProUGUI>().text = "High Score: " + PlayerPrefs.GetInt("highScore", 0);
     }
 }
