@@ -52,7 +52,7 @@ public class GameController : MonoBehaviour
     // Start of program
     void Start()
     {
-        scoreText.GetComponent<Text>().text = "Score: " + numCorrect;
+        scoreText.GetComponent<Text>().text = "Score: " + playerScore;
         // Get question based on the chosenTopic
         currentQNum++;
         SetQuestion(Questions.ReturnQuestion(Topic.chosenTopic));
@@ -119,12 +119,13 @@ public class GameController : MonoBehaviour
         if (Int32.Parse(currentQuestion.Answer) == a)
         {
             numCorrect++;
+            playerScore += Math.Round(currCountdownValue * 100, 0);
             //Score();
             Debug.Log("Correct!!");
             FindObjectOfType<MusicManager>().Play("Correct");
         }
 
-        scoreText.GetComponent<Text>().text = "Score: " + numCorrect;
+        scoreText.GetComponent<Text>().text = "Score: " + playerScore;
 
         // Disable all buttons
         choice1Text.GetComponentInParent<Button>().enabled = false;
@@ -181,9 +182,9 @@ public class GameController : MonoBehaviour
         while (currCountdownValue > 0 && timerRun)
         {
             Debug.Log("Countdown: " + currCountdownValue);
-            timeText.GetComponent<Text>().text = "Time: " + currCountdownValue;
-            yield return new WaitForSeconds(1.0f);
-            currCountdownValue--;
+            timeText.GetComponent<Text>().text = "Time: " + Math.Round(currCountdownValue, 0);
+            yield return new WaitForSeconds(0.01f);
+            currCountdownValue -= 0.01f;
         }
 
         if (timerRun)

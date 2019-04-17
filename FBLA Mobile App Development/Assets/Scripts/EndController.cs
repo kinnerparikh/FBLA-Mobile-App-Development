@@ -17,9 +17,9 @@ public class EndController : MonoBehaviour
 
     void Start()
     {
-        scoreText.GetComponent<TextMeshProUGUI>().text = "Score: " + GameController.numCorrect;
+        scoreText.GetComponent<TextMeshProUGUI>().text = "Score: " + GameController.playerScore;
         m_firstButton.onClick.AddListener(ResetGame);
-        HighScore(GameController.numCorrect);
+        HighScore((int)GameController.playerScore);
         FindObjectOfType<MusicManager>().Stop("Gameplay");
         FindObjectOfType<MusicManager>().Stop("ThemeSong");
         FindObjectOfType<MusicManager>().Play("ThemeSong");
