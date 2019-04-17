@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\EndController.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\HighScore.cs" />
+    <Compile Include="Assets\Scripts\LoginController.cs" />
     <Compile Include="Assets\Scripts\MenuController.cs" />
     <Compile Include="Assets\Scripts\MusicManager.cs" />
     <Compile Include="Assets\Scripts\PlayerProgress.cs" />
@@ -318,6 +319,18 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>/Applications/Unity/Hub/Editor/2018.3.6f1/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="Facebook.Unity">
+      <HintPath>/Users/minhan/repos/FBLA-Mobile-App-Development/FBLA Mobile App Development/Assets/FacebookSDK/Plugins/Facebook.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook.Unity.Settings">
+      <HintPath>/Users/minhan/repos/FBLA-Mobile-App-Development/FBLA Mobile App Development/Assets/FacebookSDK/Plugins/Settings/Facebook.Unity.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook.Unity.Gameroom">
+      <HintPath>/Users/minhan/repos/FBLA-Mobile-App-Development/FBLA Mobile App Development/Assets/FacebookSDK/Plugins/Gameroom/Facebook.Unity.Gameroom.dll</HintPath>
+    </Reference>
+    <Reference Include="FacebookNamedPipeClient">
+      <HintPath>/Users/minhan/repos/FBLA-Mobile-App-Development/FBLA Mobile App Development/Assets/FacebookSDK/Plugins/Gameroom/FacebookNamedPipeClient.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>/Users/minhan/repos/FBLA-Mobile-App-Development/FBLA Mobile App Development/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
@@ -326,18 +339,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
       <HintPath>/Users/minhan/repos/FBLA-Mobile-App-Development/FBLA Mobile App Development/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="Facebook.Unity.Gameroom">
-      <HintPath>/Users/minhan/repos/FBLA-Mobile-App-Development/FBLA Mobile App Development/Assets/FacebookSDK/Plugins/Gameroom/Facebook.Unity.Gameroom.dll</HintPath>
-    </Reference>
-    <Reference Include="FacebookNamedPipeClient">
-      <HintPath>/Users/minhan/repos/FBLA-Mobile-App-Development/FBLA Mobile App Development/Assets/FacebookSDK/Plugins/Gameroom/FacebookNamedPipeClient.dll</HintPath>
-    </Reference>
-    <Reference Include="Facebook.Unity">
-      <HintPath>/Users/minhan/repos/FBLA-Mobile-App-Development/FBLA Mobile App Development/Assets/FacebookSDK/Plugins/Facebook.Unity.dll</HintPath>
-    </Reference>
-    <Reference Include="Facebook.Unity.Settings">
-      <HintPath>/Users/minhan/repos/FBLA-Mobile-App-Development/FBLA Mobile App Development/Assets/FacebookSDK/Plugins/Settings/Facebook.Unity.Settings.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>/Applications/Unity/Hub/Editor/2018.3.6f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
