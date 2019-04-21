@@ -32,6 +32,8 @@ public class LoginController : MonoBehaviour
             {
                 Debug.Log(perm);
             }
+            SceneManager.LoadScene("Start");
+
         }
         else
         {

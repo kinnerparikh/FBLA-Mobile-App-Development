@@ -14,6 +14,11 @@ public class EndController : MonoBehaviour
 
     public Button m_firstButton;
 
+    const string privateCode = "";
+    const string publicCode = "";
+    const string webUrl = "http://dreamlo.com/lb/fSJ0kZGVv0mxWHfmsF6fqASwUXyLPUE0KRhYaWOUzJ7Q";
+
+
 
     void Start()
     {
@@ -59,5 +64,21 @@ public class EndController : MonoBehaviour
         }
 
         highScore.GetComponent<TextMeshProUGUI>().text = "High Score: " + PlayerPrefs.GetInt("highScore", 0);
+    }
+
+    IEnumerator UploadNewHighScore(string username, int score)
+    {
+        WWW www = new WWW(webUrl + "/add/" + WWW.EscapeURL(username) + "/" + score);
+        yield return www;
+
+        if (string.IsNullOrEmpty(www.error))
+        {
+            Debug.Log("Upload successful");
+        }
+
+        else
+        {
+            Debug.Log("Upload failed");
+        }
     }
 }
