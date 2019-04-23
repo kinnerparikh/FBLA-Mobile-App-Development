@@ -33,8 +33,14 @@ public class EndController : MonoBehaviour
     // Resets game after a loss or after 10 questions answered correctly
     void ResetGame()
     {
+        // Load start screen
         SceneManager.LoadScene("Start");
+
+        // Set score back to 0 for the new game 
         GameController.numCorrect = 0;
+        GameController.playerScore = 0;
+
+        //Reset question database
         for (int i = 0; i < Questions.questionsUsed.Count; i++)
         {
             Questions.questionsUsed[i].Used = false;

@@ -1,0 +1,76 @@
+Question|Choice1|Choice2|Choice3|Choice4|Answer|Type
+How many introduction to events are there?|9|15|5|7|1|1
+Which of the following is NOT a testing event?|Objective tests|Collaborative object test & team performance|Objective test & roleplay|Prejudged report & objective|4|1
+Which of the following is NOT a performance event?|Speech|Presentation with equipment|Prejudged report & speech|Prejudged report and presentation|1|1
+How many events are there total?|43|72|95|103|2|1
+Which of these are only an individual event?|E-business|Graphic design|Impromptu speaking|Marketing|3|1
+What is the 2019 prompt for Intro to Business Presentation?|Giving Tuesday|Raising Awareness about FBLA|March For Coins Fundraising|What FBLA Means to You|1|1
+Which of the following can be a team presentation?|Intro to Public Speaking|Coding and Programming|Client Service|Digital Video Production|4|1 
+Which of the following is a Production and Objective Test?|Database Design and Application|Business Calculations|Agribusiness|Accounting II|1|1
+Which of the following is a REAL FBLA event?|Accounting III|Introduction to Business Law|Virtual Business Finance Challenge!|Sales Pitch|3|1
+What is the prompt for the 2019 Graphic Design event?|Designing a sports jersey for a new high school|Designing band merchandise|Designing phone cases for a business|Designing flyers for a local business|1|1
+Which of the following is a new event created this year?|Digital Video Production|Mobile Application Development|Networking Concepts|Political Science|4|1
+How long is an objective test?|30 Minutes|60 Minutes|15 Minutes|45 Minutes|2|1
+Which of the following is not a chapter event?|American Enterprise Project|Partnership with Business Project|Electronic Career Portfolio|Local Chapter Annual Business Report|3|1
+How many entries can each state enter per event?|1|2|3|4|4|1
+Which one of the following events is not a speech event?|Impromptu Speaking|Business Communication|Introduction to Public Speaking|Public Speaking|2|1
+What is the study of how to employ resources to produce goods and services and distribute them among competing groups and individuals?|Economics|Capitalism|Marketing|Socialism|1|2
+The conflict between unlimited wants and limited resources is known as:|Scarcity|Factors of production|Resource allocation|Capital resources|1|2
+The largest percentage of U.S. businesses employs|Over 100 employees|No employees other than the owner|Between 5 and 10 employees|Between 50 and 100 Employees|2|2
+All of the following are among the primary differences between a business market and a consumer market except:|The nature of the buying unit|Market structure and demand|The types of decisions and the decision process involved|Purchase decisions to satisfy needs|4|2
+What is the obtaining of private and personal information about a person such as a credit card number and using that information to buy things?|Banking theft|Online theft|Petty theft|Identitiy theft|4|2
+Which type of a report would a local school system issue to the state board if it had to correct some deficiencies?|plan of action|status report|audit report|periodic report|1|2 
+Flaming, when referring to e-mail messages, means|sending a message composed in anger|sending a message which contains too many emoticons.|sending unsolicited material that the receiver may deem to be junk mail.|sending the same message to many people.|1|2
+Identify the type of phrase underlined in the following sentence. During their lifetime, American Indians often use several different names.|gerund|adverb|infinitive|adjective|2|2 
+This level of management sets goals for specific areas of the business and decides what the employees in each area must do to meet those goals.|middle management|department management|production management|senior management|1|2
+Currently, it is legal for your employer to:|read your e-mail|post publicly all their data concerning you|get around discrimination laws on issues regarding computer privacy|confiscate your personal mail|1|2
+What are rules about how businesses and their employees should behave?|Mission statements|Standards|Values|Business ethics|4|2
+A disadvantage of corporations is:|Taxation|Professional management|Perpetual life|The potential for greater amount of capital|1|2
+Shirking of individual responsibility is also known as:|Groupthink|Social loafing|Synergy|Task facilitation|2|2
+The easiest way to become a business owner is to:|Start one|Purchase a franchise|Buy stock in a corporation|Find a partner|3|2
+Which is NOT a common time-waster on the job?|Keeping a time log|Unnecessary telephone conversations|Disorganization|Ineffective communication|1|2
+When is the 2019 National Leadership Conference (NLC)?|June 25 - June 29|June 29 - July 2|July 2 - July 5|July 5 - July 9|2|3
+Where is the 2019 National Leadership Conference (NLC)?|Rochester, New York|San Francisco, California|San Antonio, Texas|Los Angeles, California|3|3
+Which of the following is NOT a National Fall Leadership Conference Location (NFLC)?|Washington D.C.|Birmingham, AL|Denver, CO|Los Angeles, CA|4|3
+Which of the following is NOT part of FBLA's mission statement?|Academic competitions|Business opportunities|Educational Programs|Community service|2|3
+How many regions are there in FBLA?|5|6|4|9|1|3 
+How many states does FBLA cover?|50|43|38|47|4|3
+Approximately how many countries does FBLA cover?|5|3|7|1|3|3
+Approximately how many members are there in FBLA?|300,000|196,900|123,456|210,010|2|3
+Approximately how many chapters are there in FBLA?|5200|4000|3200|9000|1|3
+What does the PBL in FBLA-PBL stand for?|Phi Beta Lambda|Rho Sigma Zeta|Pi Beta Lambda|Phi Beta Iota|1|3
+National celebrations include each of the following EXCEPT:|FBLA-PBL Week|American Enterprise Day|March of Dimes Day|FBLA-PBL Community Service Day|3|3
+FBLA-PBL week is the second week in:|January|February|March|April|2|3
+Which word is NOT a part of the FBLA emblem?|Education|Service|Progress|Leadership|4|3
+Which one of the following is NOT one of the administrative regions in the United States?|Eastern|Mountain-Plains|Western-Central|Southern|3|3
+Proposed amendments to the bylaws shall be submitted in writing no later than:|April 1|June 10|November 1|March 1|1|3
+When was FBLA-Middle Level formed?|1994|1937|1945|1986|1|4
+Who was the founder of FBLA?|Conrad N. Hilton|Edward D. Miller|Jean Buckley|Hamden L. Forkner|4|4
+When was FBLA founded?|1945|1937|1997|1926|2|4
+Who was FBLA's first sponsor in 1940?|Conrad N. Hilton Foundation|The Education Trust|National Business Eduation Association|United Business Education Association|3|4
+Where was the first chapter in FBLA formed?|West Virginia|Iowa|New York|Tenessee|4|4
+When was the first chapter in FBLA formed?|1942|1995|1978|1949|1|4
+When was FBLA-PBL (college level) formed?|1954|1958|1948|1962|2|4
+Where was FBLA-PBL (college level) formed?|Iowa|Kentucky|Tenessee|West Virginia|1|4
+When did FBLA membership reach 200,000?|1983|1987|1986|1954|2|4
+Who is the current FBLA CEO and president?|Conrad N. Hilton|Edward D. Miller|Jean Buckley|Hamden L. Forkner|3|4
+When did FBLA-PBL become 501(c)(3)?|1995|1954|1982|1969|4|4
+Which state became the first FBLA state chapter?|Iowa|Tenessee|Washington|Virginia|1|4
+Where was the 2018 FBLA NLC?|Denver, Colorado|Baltimore, Maryland|Indianapolis, Indiana|Omaha, Nebraska|2|4
+Where did the second FBLA chapter start|Iowa|Nebraska|Tenessee|West Virginia|4|4
+When was the FBLA bylaws last amended?|2018|2000|2016|1994|3|4
+What is FBLA national president Eu Ro Wang's favorite food?|Pizza|Ramen|Sushi|Ice cream|2|5
+Who is the FBLA National Secretary?|Keerti Soudappan|Galadriel Coury|Garret Koch|Eli Amyx|1|5
+What state is FBLA national parliamentarian, Michael Zhao, from?|Washington|Arizona|Wyoming|California|4|5
+Who is the FBLA national treasurer?|Madelyn Remington|Ty Richard|Garret Koch|Galadriel Coury|4|5
+What activity does Trentyn Tennant, FBLA western region VP, NOT participate in?|City counsilor for his city La Pine|Speech and debate|Sports|Tobacco prevention committee|2|5
+Who is FBLA Southern Region VP?|Ty Rickard|Keerti Soudappan|Galadriel Coury|Garret Koch|1|5
+Who is FBLA North Central Region VP?|Keerti Soudappan|Galadriel Coury|Garret Koch|Eli Amyx|4|5
+Who is FBLA Mountain Plains Region VP?|Madelyn Remington|Ty Richard|Garret Koch|Galadriel Coury|1|5
+Who is FBLA Eastern Region VP?|Ty Rickard!|Keerti Soudappan|Galadriel Coury|Garret Koch|4|5
+How many National Officers are there in FBLA?|9|10|5|8|1|5
+Where are the FBLA national officers elected?|State Leadership Conference|National Leadership Conference|National Fall Leadership Conference|Officer Conference|2|5
+Who are the national officers elected by?|Peers|Teachers|Administrators|Sponsers|1|5
+How is the FBLA parliamentarian appointed?|Board of directors|Teachers|Exam|Peers|3|5
+What do the vice presidents represent?|Regions|Nation|States|Districts|1|5
+Where does the president serve?|Board of teachers|Board of directors|Administrators|National Leadership Board|2|5

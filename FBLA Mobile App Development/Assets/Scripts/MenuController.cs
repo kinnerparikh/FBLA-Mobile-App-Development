@@ -19,7 +19,7 @@ public class MenuController : MonoBehaviour
     [SerializeField]
     private GameObject instructionsButton;
     [SerializeField]
-    private GameObject creditsButton;
+    private GameObject creditsButton; 
     [SerializeField]
     private GameObject bugMenu;
 
@@ -29,7 +29,7 @@ public class MenuController : MonoBehaviour
         // Always run the following in order
 
         // Imports questions to lists of strings from csv
-        QuestionDatabase.ImportGame("final");
+        QuestionDatabase.ImportGame("fbla");
         // Load all the strings into lists of Question Set Objects organized by categories
         Questions.LoadAllQuestions();
 
