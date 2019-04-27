@@ -70,10 +70,14 @@ public class EndController : MonoBehaviour
         }
 
         highScore.GetComponent<TextMeshProUGUI>().text = "High Score: " + PlayerPrefs.GetInt("highScore", 0);
+
+        UploadNewHighScore(MenuController.username, currScore);
     }
 
     IEnumerator UploadNewHighScore(string username, int score)
     {
+        if (string.IsNullOrEmpty(username))
+            username = "NoName";
         WWW www = new WWW(webUrl + "/add/" + WWW.EscapeURL(username) + "/" + score);
         yield return www;
 

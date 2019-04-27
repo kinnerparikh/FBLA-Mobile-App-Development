@@ -23,6 +23,8 @@ public class MenuController : MonoBehaviour
     [SerializeField]
     private GameObject bugMenu;
 
+    public static string username;
+
 
     public void Start()
     {
