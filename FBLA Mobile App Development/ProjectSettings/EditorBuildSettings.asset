@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Login.unity
     guid: ca1d3cfbabfce40d8aa100ec1226e596
   - enabled: 1
+    path: Assets/Scenes/NameEntry.unity
+    guid: cc5f7031aca394886a21b75e1f5c6008
+  - enabled: 1
     path: Assets/Scenes/Start.unity
     guid: 78e7ef53841879b41b117e83218f610d
   - enabled: 1
@@ -29,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/End.unity
     guid: 8e5af04297e25ac41b6a3a02b362e1e0
+  - enabled: 1
+    path: Assets/Scenes/Leaderboard.unity
+    guid: 1b7f33595a7dc488fbeda1bfd382c1e1
   m_configObjects: {}

@@ -13,13 +13,13 @@ public class Score
 public class HighScores
 {
     // Current list of high scores
-    List<Score> m_currentList;
+    static List<Score> m_currentList;
 
     // Remembers if list of scores read from file 
-    bool m_fFileRead = false;
+    static bool m_fFileRead = false;
 
     // Ensures scores from file have been read exactly once
-    private void EnsureFileRead()
+    private static void EnsureFileRead()
     {
         // If list of scores NOT read from file
         if (!m_fFileRead)
@@ -68,7 +68,7 @@ public class HighScores
     }
 
     // Set highScore based on Name
-    public void AddHighScore(String name, int score)
+    public static  void AddHighScore(String name, int score)
     {
         // Makes sure file has been read
         EnsureFileRead();
@@ -93,7 +93,7 @@ public class HighScores
     }
 
     // Gets list of name and scores, sorted by ascending order of score
-    public List<Score> GetScores()
+    public static List<Score> GetScores()
     {
         // Makes sure file has been read
         EnsureFileRead();

@@ -18,8 +18,6 @@ public class EndController : MonoBehaviour
     const string publicCode = "";
     const string webUrl = "http://dreamlo.com/lb/fSJ0kZGVv0mxWHfmsF6fqASwUXyLPUE0KRhYaWOUzJ7Q";
 
-
-
     void Start()
     {
         scoreText.GetComponent<TextMeshProUGUI>().text = "Score: " + GameController.playerScore;
@@ -28,6 +26,12 @@ public class EndController : MonoBehaviour
         FindObjectOfType<MusicManager>().Stop("Gameplay");
         FindObjectOfType<MusicManager>().Stop("ThemeSong");
         FindObjectOfType<MusicManager>().Play("ThemeSong");
+    }
+
+    // Loads leaderboard scene 
+    public void Leaderboard()
+    {
+        SceneManager.LoadScene("Leaderboard");
     }
 
     // Resets game after a loss or after 10 questions answered correctly

@@ -9,7 +9,7 @@ public class LoginController : MonoBehaviour
     public void PlayAsGuest()
     {
         // Load the Scene to choose topic
-        SceneManager.LoadScene("Start");
+        SceneManager.LoadScene("NameEntry");
     }
 
     public void Login()
@@ -32,6 +32,9 @@ public class LoginController : MonoBehaviour
             {
                 Debug.Log(perm);
             }
+
+            FB.API("me?fields=name", HttpMethod.GET, NameCallBack);
+
             SceneManager.LoadScene("Start");
 
         }
@@ -39,6 +42,21 @@ public class LoginController : MonoBehaviour
         {
             Debug.Log("User cancelled login");
         }
+    }
+
+    void NameCallBack(IGraphResult result)
+    {
+        if (result.Error == null)
+        {
+            IDictionary dict = Facebook.MiniJSON.Json.Deserialize(result.ToString()) as IDictionary;
+            string fbname = dict["name"].ToString();
+            MenuController.username = fbname;
+        }
+        else
+        {
+            Debug.Log(result.Error);
+        }
+
     }
 
     private void Awake()

@@ -25,6 +25,11 @@ public class MenuController : MonoBehaviour
 
     public static string username;
 
+    // Loads leaderboard scene 
+    public void Leaderboard()
+    {
+        SceneManager.LoadScene("Leaderboard");
+    }
 
     public void Start()
     {
