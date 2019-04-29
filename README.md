@@ -16,7 +16,8 @@ We have developed many features with the focus on improving member experience an
 
 ## Requirements
 * iOS or Android Device 
-* **For iOS:** XCode Version 9.0 and Onwards
+* **For iOS:** iOS Version 10.0 or later
+* **For Android** Android Pie (9.0)
 
 # Installation Guide
 Here is how to install *Fast Facts: FBLA* on both Android and iOS
@@ -27,15 +28,8 @@ Here is how to install *Fast Facts: FBLA* on both Android and iOS
 3. Run the .APK file on your device to install the app onto your device. 
 
 ## IOS
-### AS OF NOW, OUR APP CANNOT SUPPORT IOS! COMING SOON IN SPRING OF 2019
-1. Download Xcode project [here](http://github.com)
-2. Open the Xcode Project ".xcodeproj".
-
-**Running on iOS Simulator**: 
-Click the play button at top left corner of Xcode. When selecting a device, select any iPhone device to run Fast Facts: FBLA on the simulator. 
-
-**Running on physical iPhone**
-Attach any iOS device to your computer and click the play button at top left corner of Xcode. When selecting a device, choose the device that is attached to your computer. If your device is prompted to allow the app to run, accept all prompts. 
+### Running on Physical iPhone
+On the iOS App Store, download the app, [Fast Facts: FBLA](https://www.apple.com/ios/app-store/) to run the app.
 
 # Use
   
@@ -63,6 +57,9 @@ By clicking on the bug icon on the bottom right corner of the main screen, an in
 * [Native Share for Android & iOS API](https://assetstore.unity.com/packages/tools/integration/native-share-for-android-ios-112731) - By Süleyman Yasir Kula
 * [Vibration code](https://gist.github.com/munkbusiness/9e0a7d41bb9c0eb229fd8f2313941564) - munkbusiness on GitHub
 * [Trello Bug Tracker [PRO] Asset](https://assetstore.unity.com/packages/tools/integration/trello-bug-tracker-pro-75613) - Diegod Games
+* [Facebook SDK for Unity](https://developers.facebook.com/docs/unity/) - By Facebook for Developers
+### [Facebook SDK](https://developers.facebook.com/docs/unity/)
+The Facebook SDK was used for the login feature of this application, as well as the leaderboard. Users will login with their Facebook account, and their username will show with their highscore in the leaderboard. 
 
 # Developer's Note
 ## Created With
