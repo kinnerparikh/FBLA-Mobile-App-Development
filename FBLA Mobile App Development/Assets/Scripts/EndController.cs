@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
 
 public class EndController : MonoBehaviour
 {
@@ -14,15 +15,21 @@ public class EndController : MonoBehaviour
 
     public Button m_firstButton;
 
+    [SerializeField]
+    TMP_Text nameText;
+
     const string privateCode = "";
     const string publicCode = "";
     const string webUrl = "http://dreamlo.com/lb/fSJ0kZGVv0mxWHfmsF6fqASwUXyLPUE0KRhYaWOUzJ7Q";
 
     void Start()
     {
+        nameText.text = "Name: " + MenuController.username;
+        StartCoroutine(UploadNewHighScore(MenuController.username, (int)GameController.playerScore));
         scoreText.GetComponent<TextMeshProUGUI>().text = "Score: " + GameController.playerScore;
-        m_firstButton.onClick.AddListener(ResetGame);
         HighScore((int)GameController.playerScore);
+        Debug.Log("Uploading ");
+        m_firstButton.onClick.AddListener(ResetGame);
         FindObjectOfType<MusicManager>().Stop("Gameplay");
         FindObjectOfType<MusicManager>().Stop("ThemeSong");
         FindObjectOfType<MusicManager>().Play("ThemeSong");
@@ -55,7 +62,7 @@ public class EndController : MonoBehaviour
     {
         NativeShare ns = new NativeShare();
         ns.SetTitle("Check Out This AWESOME Game");
-        ns.SetText("I Just GOT " + GameController.numCorrect + "/10 on the Fast Facts: FBLA QUIZ!! \n" +
+        ns.SetText("I Just GOT " + GameController.numCorrect + " on the Fast Facts: FBLA QUIZ!!\n" +
             "https://github.com/kinzorPark/FBLA-Mobile-App-Development");
         ns.Share();
     }
@@ -75,17 +82,19 @@ public class EndController : MonoBehaviour
 
         highScore.GetComponent<TextMeshProUGUI>().text = "High Score: " + PlayerPrefs.GetInt("highScore", 0);
 
-        UploadNewHighScore(MenuController.username, currScore);
+
+
     }
 
     IEnumerator UploadNewHighScore(string username, int score)
     {
-        if (string.IsNullOrEmpty(username))
-            username = "NoName";
+        Debug.Log("UploadNewHighScoreRun");
+        Debug.Log(webUrl + "/add/" + WWW.EscapeURL(username) + "/" + score);
         WWW www = new WWW(webUrl + "/add/" + WWW.EscapeURL(username) + "/" + score);
+        WWW www1 = new WWW("http://dreamlo.com/lb/fSJ0kZGVv0mxWHfmsF6fqASwUXyLPUE0KRhYaWOUzJ7Q/add/Carmine/100");
         yield return www;
 
-        if (string.IsNullOrEmpty(www.error))
+        if (string.IsNullOrEmpty(www1.error))
         {
             Debug.Log("Upload successful");
         }

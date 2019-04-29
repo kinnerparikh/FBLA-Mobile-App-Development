@@ -41,7 +41,9 @@ public class GameController : MonoBehaviour
     // Stats
     public static int numCorrect = 0;
     public static double playerScore = 0;
-    
+
+    [SerializeField]
+    TMP_Text nameText;
 
     // How much time is left in the timer
     float currCountdownValue;
@@ -52,6 +54,7 @@ public class GameController : MonoBehaviour
     // Start of program
     void Start()
     {
+        nameText.text = "Name: " + MenuController.username;
         scoreText.GetComponent<Text>().text = "Score: " + playerScore;
         // Get question based on the chosenTopic
         currentQNum++;

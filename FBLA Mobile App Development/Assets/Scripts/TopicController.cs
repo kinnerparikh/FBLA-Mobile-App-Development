@@ -15,6 +15,9 @@ public class TopicController : MonoBehaviour
     [SerializeField]
     private GameObject categoryText;
 
+    [SerializeField]
+    TMP_Text nameText;
+
     // Time interval for spinner
     [SerializeField]
     private float timeInterval = 0.01f;
@@ -32,6 +35,7 @@ public class TopicController : MonoBehaviour
     // Start to handle background music
     private void Start()
     {
+        nameText.text = "Name: " + MenuController.username;
         FindObjectOfType<MusicManager>().Stop("Gameplay");
         FindObjectOfType<MusicManager>().Stop("ThemeSong");
         FindObjectOfType<MusicManager>().Play("Gameplay");

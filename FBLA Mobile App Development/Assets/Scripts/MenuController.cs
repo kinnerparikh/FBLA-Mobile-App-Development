@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 //static bool AudioBegin = false;
 
@@ -22,6 +23,8 @@ public class MenuController : MonoBehaviour
     private GameObject creditsButton; 
     [SerializeField]
     private GameObject bugMenu;
+    [SerializeField]
+    TMP_Text nameText;
 
     public static string username;
 
@@ -33,6 +36,7 @@ public class MenuController : MonoBehaviour
 
     public void Start()
     {
+        nameText.text = "Name: " + username;
         // Always run the following in order
 
         // Imports questions to lists of strings from csv
