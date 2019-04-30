@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Facebook.Unity;
 using UnityEngine.SceneManagement;
+using Facebook.MiniJSON;
 
 public class LoginController : MonoBehaviour
 {
@@ -44,13 +45,12 @@ public class LoginController : MonoBehaviour
         }
     }
 
-    void NameCallBack(IGraphResult result)
+
+void NameCallBack(IResult result)
     {
         if (result.Error == null)
         {
-            IDictionary dict = Facebook.MiniJSON.Json.Deserialize(result.ToString()) as IDictionary;
-            string fbname = dict["name"].ToString();
-            MenuController.username = fbname;
+            MenuController.username = result.ResultDictionary["name"].ToString();
         }
         else
         {

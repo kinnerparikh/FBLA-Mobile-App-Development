@@ -91,10 +91,9 @@ public class EndController : MonoBehaviour
         Debug.Log("UploadNewHighScoreRun");
         Debug.Log(webUrl + "/add/" + WWW.EscapeURL(username) + "/" + score);
         WWW www = new WWW(webUrl + "/add/" + WWW.EscapeURL(username) + "/" + score);
-        WWW www1 = new WWW("http://dreamlo.com/lb/fSJ0kZGVv0mxWHfmsF6fqASwUXyLPUE0KRhYaWOUzJ7Q/add/Carmine/100");
         yield return www;
 
-        if (string.IsNullOrEmpty(www1.error))
+        if (string.IsNullOrEmpty(www.error))
         {
             Debug.Log("Upload successful");
         }
