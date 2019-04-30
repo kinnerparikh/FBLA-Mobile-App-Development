@@ -17,31 +17,29 @@ We have developed many features with the focus on improving member experience an
 ## Requirements
 * iOS or Android Device 
 * **For iOS:** iOS Version 10.0 or later
-* **For Android** Android Pie (9.0)
 
 # Installation Guide
 Here is how to install *Fast Facts: FBLA* on both Android and iOS
 
 ## Android - APK
-1. Find the .APK file name *Fast Facts: FBLA* found in the [here](https://github.com/kinzorPark/FBLA-Mobile-App-Development/blob/master/Builds/FinalBuild.apk)
+1. Find the .APK file name *Fast Facts: FBLA* found [here](https://github.com/kinzorPark/FBLA-Mobile-App-Development/blob/master/Builds/FinalBuild.apk)
 2. Download the .APK file onto your android device. 
 3. Run the .APK file on your device to install the app onto your device. 
 
 ## IOS
-### Running on Physical iPhone
-On the iOS App Store, download the app, [Fast Facts: FBLA](https://www.apple.com/ios/app-store/) to run the app.
+Download the app, [Fast Facts: FBLA](https://www.apple.com/ios/app-store/), on the iOS app store and run.
 
 # Use
   
 ## How To Play
 1. Spin the wheel to receive a question from one of five categories
 2. You have 15 seconds to answer the question
-3. If you get a question wrong, the game ends
+3. If you get a question wrong, the game ends, and your score is saved
 4. If you get a question right, you spin the wheel again
-5. If you get 10 questions right in a row, you win
+5. If you get 10 questions right in a row, the game ends, and your score is saved
 
 ## Reporting Bugs & Suggestions
-By clicking on the bug icon on the bottom right corner of the main screen, an interface will be displayed where you can submit bugs that you see or any suggestions.
+By clicking on the bug icon on the bottom right corner of the main screen, an interface will be displayed where you can submit bugs that you see or any suggestions you have.
 
 # Copyright
 ## Assets
