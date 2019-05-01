@@ -29,7 +29,7 @@ Here is how to install *Fast Facts: FBLA* on both Android and iOS
 Make sure to allow installation of unknown apps in the settings.
 
 ## IOS
-Download the app, [Fast Facts: FBLA](https://www.apple.com/ios/app-store/), on the iOS app store and run.
+Download the app, [Fast Facts: FBLA](https://itunes.apple.com/us/app/fast-facts-fbla/id1462014959?mt=8), on the iOS app store and run.
 
 # Use
   
