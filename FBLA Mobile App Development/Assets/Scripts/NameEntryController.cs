@@ -15,8 +15,10 @@ public class NameEntryController : MonoBehaviour
     public void InputName()
     {
         MenuController.username = nameInput.GetComponent<TMP_InputField>().text;
-        Debug.Log(MenuController.username);
-        SceneManager.LoadScene("Start");
+        if (MenuController.username != "")
+        {
+            SceneManager.LoadScene("Start");
+        }
     }
 
     // Start is called before the first frame update

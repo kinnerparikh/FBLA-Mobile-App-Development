@@ -104,7 +104,7 @@ void NameCallBack(IResult result)
     // Start is called before the first frame update
     void Start()
     {
-        
+        FindObjectOfType<MusicManager>().Play("ThemeSong");
     }
 
     // Update is called once per frame

@@ -36,9 +36,12 @@ public class TopicController : MonoBehaviour
     private void Start()
     {
         nameText.text = "Name: " + MenuController.username;
-        FindObjectOfType<MusicManager>().Stop("Gameplay");
         FindObjectOfType<MusicManager>().Stop("ThemeSong");
-        FindObjectOfType<MusicManager>().Play("Gameplay");
+
+        var gamePlayAudio = FindObjectOfType<MusicManager>().GetComponents<AudioSource>()[3];
+        if (gamePlayAudio.clip != null && gamePlayAudio.time == 0) {
+            FindObjectOfType<MusicManager>().Play("Gameplay");
+        }
     }
 
     // To spin wheel
@@ -132,7 +135,7 @@ public class TopicController : MonoBehaviour
             default: break;
         }
 
-        // Wait onem second
+        // Wait one second
         yield return new WaitForSeconds(1);
 
         //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
