@@ -71,8 +71,10 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene("Credits");
     }
 
+    // Update is called once per frame
     private void Update()
     {
+
         if (bugMenu.activeSelf == true)
         {
             startButton.GetComponent<Button>().enabled = false;

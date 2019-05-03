@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class LoginController : MonoBehaviour
 {
+    // Called if user wants to play as a guest
     public void PlayAsGuest()
     {
         // Load the Scene to choose topic
@@ -14,6 +15,7 @@ public class LoginController : MonoBehaviour
 
     public void Login()
     {
+        // Set of permissions required
         var permissions = new List<string>() { "public_profile", "email" };
         FB.LogInWithReadPermissions(permissions, AuthorizeCallback);
     }
@@ -82,6 +84,7 @@ public class LoginController : MonoBehaviour
         }
         else
         {
+            // Log Debugging
             Debug.Log("Cannot Initialize Facebook SDK");
         }
     }
@@ -95,7 +98,7 @@ public class LoginController : MonoBehaviour
         }
         else
         {
-            // Resume the gamea
+            // Resume the game
             Time.timeScale = 1;
         }
     }

@@ -6,16 +6,17 @@ using TMPro;
 
 public class NameEntryController : MonoBehaviour
 {
-
+    // 
     public TMP_InputField nameInput;
 
-    // 1. Attach to the NameEntry scene
-    // 2. When the submit button is pressed, set field username to the text in
-    // entry field
+
     public void InputName()
     {
+        // Set the username in the input field to the username variable in MenuController
         MenuController.username = nameInput.GetComponent<TMP_InputField>().text;
+        // Log Debugger
         Debug.Log(MenuController.username);
+        // Load "start" scene
         SceneManager.LoadScene("Start");
     }
 

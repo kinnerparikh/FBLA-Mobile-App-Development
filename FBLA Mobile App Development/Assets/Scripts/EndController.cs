@@ -8,27 +8,30 @@ using UnityEngine.Networking;
 
 public class EndController : MonoBehaviour
 {
+    // Serialized Fields
     [SerializeField]
     private GameObject scoreText;
     [SerializeField]
     public GameObject highScore;
-
-    public Button m_firstButton;
-
     [SerializeField]
     TMP_Text nameText;
 
-    const string privateCode = "";
-    const string publicCode = "";
+    public Button m_firstButton;
+
+    // URL for leaderboards
     const string webUrl = "http://dreamlo.com/lb/fSJ0kZGVv0mxWHfmsF6fqASwUXyLPUE0KRhYaWOUzJ7Q";
 
     void Start()
     {
+        // Username text on screen
         nameText.text = "Name: " + MenuController.username;
-        StartCoroutine(UploadNewHighScore(MenuController.username, (int)GameController.playerScore));
+        // Update score on screen
         scoreText.GetComponent<TextMeshProUGUI>().text = "Score: " + GameController.playerScore;
+        // Calls method to upload score to global leaderboards
+        StartCoroutine(UploadNewHighScore(MenuController.username, (int)GameController.playerScore));
+        // Calls method to update local high score
         HighScore((int)GameController.playerScore);
-        Debug.Log("Uploading ");
+
         m_firstButton.onClick.AddListener(ResetGame);
         FindObjectOfType<MusicManager>().Stop("Gameplay");
         FindObjectOfType<MusicManager>().Stop("ThemeSong");
@@ -58,6 +61,7 @@ public class EndController : MonoBehaviour
         }
     }
 
+    // Share button action controller
     public void Share()
     {
         NativeShare ns = new NativeShare();
@@ -67,38 +71,51 @@ public class EndController : MonoBehaviour
         ns.Share();
     }
 
+    // Local high score updater
     public void HighScore(int currScore)
     {
+        // If the current score in higher than the stored high score
         if (currScore > PlayerPrefs.GetInt("highScore", 0))
         {
+            // Debugging log
             Debug.Log("High Score updated from " + PlayerPrefs.GetInt("highScore", 0) + " to " + currScore);
+
+            // Update the local high score
             PlayerPrefs.SetInt("highScore", currScore);
         }
 
+        // Debugging log
         else
         {
             Debug.Log("High Score stays same: " + PlayerPrefs.GetInt("highScore", 0));
         }
 
+        // Update text on UI
         highScore.GetComponent<TextMeshProUGUI>().text = "High Score: " + PlayerPrefs.GetInt("highScore", 0);
 
 
 
     }
 
+    // Uploads new high score to online leaderboards
     IEnumerator UploadNewHighScore(string username, int score)
     {
+        // Debugging logs
         Debug.Log("UploadNewHighScoreRun");
         Debug.Log(webUrl + "/add/" + WWW.EscapeURL(username) + "/" + score);
+
+        // Creates new object of type "WWW"
         WWW www = new WWW(webUrl + "/add/" + WWW.EscapeURL(username) + "/" + score);
-        WWW www1 = new WWW("http://dreamlo.com/lb/fSJ0kZGVv0mxWHfmsF6fqASwUXyLPUE0KRhYaWOUzJ7Q/add/Carmine/100");
+        // Returns "WWW" object
         yield return www;
 
-        if (string.IsNullOrEmpty(www1.error))
+        // Debugging log
+        if (string.IsNullOrEmpty(www.error))
         {
             Debug.Log("Upload successful");
         }
 
+        // Debugging log
         else
         {
             Debug.Log("Upload failed");

@@ -6,10 +6,11 @@ using System.Text;
 
 public class LeaderBoardsController : MonoBehaviour
 {
-    //High score text 
+    // High score text 
     public TMP_Text leaderboardText;
+    // Online leaderboard URL
     const string webUrl = "http://dreamlo.com/lb/fSJ0kZGVv0mxWHfmsF6fqASwUXyLPUE0KRhYaWOUzJ7Q";
-    public Highscore[] highscoreList;
+    public HighScore[] highScoreList;
 
     // Start is called before the first frame update
     void Start()
@@ -34,65 +35,96 @@ public class LeaderBoardsController : MonoBehaviour
         
     }
 
+    // Downloading the scores from the online leaderboards
     IEnumerator DownloadHighScoreFromDatabase()
     {
+        // Creates new "WWW" object 
+        // webURL + "/pipe/" returns a comma separated string
         WWW www = new WWW(webUrl + "/pipe/");
+        // Returns the "WWW" oject
         yield return www;
 
+        // Debugging log
         Debug.Log(www.text);
+
+        // If there is no error with the "WWW" object
         if (string.IsNullOrEmpty(www.error))
-            FormatHighScores(www.text);
-
-        
-
-        string scoreString = "";
-        for (int i = 0; i < Mathf.Min(highscoreList.Length, 10); i++)
         {
-            string str = highscoreList[i].getUsername() + " - " + highscoreList[i].getScore() + "\n";
-            StringBuilder newStringB = new StringBuilder(str);
+            // Call "FormatHighScores"
+            FormatHighScores(www.text);
+        }
+
+        // String to set the UI object to
+        string scoreString = "";
+
+        // Parsing through "highScoreList"
+        for (int i = 0; i < Mathf.Min(highScoreList.Length, 10); i++)
+        {
+            // creating a string with the username and score with formatting
+            string tempStr = highScoreList[i].getUsername() + " - " + highScoreList[i].getScore() + "\n";
+            // Creating a new "StringBuilder" object from "tempStr"
+            StringBuilder newStringB = new StringBuilder(tempStr);
+            // Replacing any "+" (plus) with a " " (space)
             newStringB.Replace("+", " ");
 
+            // Add modified StringBuilder back to "scoreString"
             scoreString += newStringB.ToString();
         }
 
+        // Debugging Log
         Debug.Log(scoreString);
+        // Set the UI text to "scoreString"
         leaderboardText.text = scoreString;
-
     }
 
+    // Parses through recieved data and creates array of "HighScore" objects out of them
     void FormatHighScores(string textStream)
     {
+        // Creates new string array by splitting the recieved data
         string[] entries = textStream.Split(new char[] { '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
-        highscoreList = new Highscore[entries.Length];
+        // Initializing highScoreList array
+        highScoreList = new HighScore[entries.Length];
 
+        // Parsing through "entries" array
         for (int i = 0; i < entries.Length; i++)
         {
+            // Split the entry every "|" and create an array of the split parts
             string[] entryInfo = entries[i].Split('|');
-            string username = entryInfo[0];
-            int score = int.Parse(entryInfo[1]);
-            highscoreList[i] = new Highscore(username, score);
+            // Set username to the first value in "entryInfo" array
+            string tempUsername = entryInfo[0];
+            // Creates the second value in "entryInfo" array to an int and sets that to tempScore
+            int tempScore = int.Parse(entryInfo[1]);
 
-            Debug.Log(highscoreList[i].username + ": " + highscoreList[i].score);
+            // Creates a new "HighScore" object in the highScoreList
+            highScoreList[i] = new HighScore(tempUsername, tempScore);
+
+            // Debugging log
+            Debug.Log(highScoreList[i].username + ": " + highScoreList[i].score);
         }
     }
 }
 
-public struct Highscore
+// HighScore class
+public struct HighScore
 {
+    // Declarations
     public string username;
     public int score;
 
-    public Highscore(string _username, int _score)
+    // Constructor
+    public HighScore(string _username, int _score)
     {
         username = _username;
         score = _score;
     }
 
+    // Returns the score
     public int getScore()
     {
         return score;
     }
 
+    // Returns the username
     public string getUsername()
     {
         return username;

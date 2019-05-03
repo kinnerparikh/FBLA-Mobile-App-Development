@@ -132,7 +132,7 @@ public class TopicController : MonoBehaviour
             default: break;
         }
 
-        // Wait onem second
+        // Wait one second
         yield return new WaitForSeconds(1);
 
         //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
