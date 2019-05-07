@@ -103,12 +103,18 @@ public class EndController : MonoBehaviour
         // Debugging logs
         Debug.Log("UploadNewHighScoreRun");
         Debug.Log(webUrl + "/add/" + WWW.EscapeURL(username) + "/" + score);
+        WWW www = new WWW(webUrl + "/add/" + WWW.EscapeURL(username) + "/" + score);
+        Debug.Log(webUrl + "/add/" + WWW.EscapeURL(username) + "/" + score);
 
         // Creates new object of type "WWW"
         WWW www = new WWW(webUrl + "/add/" + WWW.EscapeURL(username) + "/" + score);
         // Returns "WWW" object
         yield return www;
 
+        if (string.IsNullOrEmpty(www.error))
+        {
+            Debug.Log("Upload successful");
+        }
         // Debugging log
         if (string.IsNullOrEmpty(www.error))
         {
