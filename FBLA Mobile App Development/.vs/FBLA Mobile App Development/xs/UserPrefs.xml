@@ -1,21 +1,35 @@
 ﻿<Properties StartupConfiguration="{92FC44F5-B1A8-099E-9DAE-BF11759DB859}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MenuController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EndController.cs">
     <Files>
-      <File FileName="Assets/Scripts/MenuController.cs" Line="36" Column="5" />
+      <File FileName="Assets/Scripts/MenuController.cs" Line="36" Column="1" />
       <File FileName="Assets/Scripts/HighScore.cs" Line="69" Column="1" />
       <File FileName="Assets/Scripts/BackController.cs" Line="11" Column="2" />
-      <File FileName="Assets/Scripts/EndController.cs" Line="97" Column="10" />
+      <File FileName="Assets/Scripts/EndController.cs" Line="38" Column="60" />
       <File FileName="Assets/Scripts/TopicController.cs" Line="38" Column="37" />
       <File FileName="Assets/Scripts/NameEntryController.cs" Line="21" Column="1" />
       <File FileName="Assets/Scripts/Questions.cs" Line="60" Column="28" />
       <File FileName="Assets/Scripts/GameController.cs" Line="56" Column="6" />
       <File FileName="Assets/Scripts/LeaderBoardsController.cs" Line="81" Column="6" />
-      <File FileName="Assets/Scripts/LoginController.cs" Line="32" Column="43" />
+      <File FileName="Assets/Scripts/LoginController.cs" Line="32" Column="38" />
+      <File FileName="Assets/Scripts/MusicManager.cs" Line="61" Column="16" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FBLA Mobile App Development" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="EndController.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="83531284-8eaa-44b8-86b9-7f2615f3ee0f" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

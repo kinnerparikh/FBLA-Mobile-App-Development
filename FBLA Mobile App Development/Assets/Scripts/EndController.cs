@@ -36,6 +36,10 @@ public class EndController : MonoBehaviour
         FindObjectOfType<MusicManager>().Stop("Gameplay");
         FindObjectOfType<MusicManager>().Stop("ThemeSong");
         FindObjectOfType<MusicManager>().Play("ThemeSong");
+
+        // Set score back to 0 for the new game 
+        GameController.numCorrect = 0;
+        GameController.playerScore = 0;
     }
 
     // Loads leaderboard scene 
@@ -49,10 +53,6 @@ public class EndController : MonoBehaviour
     {
         // Load start screen
         SceneManager.LoadScene("Start");
-
-        // Set score back to 0 for the new game 
-        GameController.numCorrect = 0;
-        GameController.playerScore = 0;
 
         //Reset question database
         for (int i = 0; i < Questions.questionsUsed.Count; i++)
@@ -102,8 +102,6 @@ public class EndController : MonoBehaviour
     {
         // Debugging logs
         Debug.Log("UploadNewHighScoreRun");
-        Debug.Log(webUrl + "/add/" + WWW.EscapeURL(username) + "/" + score);
-        WWW www = new WWW(webUrl + "/add/" + WWW.EscapeURL(username) + "/" + score);
         Debug.Log(webUrl + "/add/" + WWW.EscapeURL(username) + "/" + score);
 
         // Creates new object of type "WWW"
