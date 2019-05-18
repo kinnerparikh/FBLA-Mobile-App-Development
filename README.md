@@ -22,7 +22,7 @@ We have developed many features with the focus on improving member experience an
 Here is how to install *Fast Facts: FBLA* on both Android and iOS
 
 ## Android - APK
-1. Find the .APK file name *Fast Facts: FBLA* found [here](https://github.com/kinzorPark/FBLA-Mobile-App-Development/blob/master/Builds/FinalBuild.apk)
+1. Find the .APK file name *Fast Facts: FBLA* found [here](https://github.com/kinzorPark/FBLA-Mobile-App-Development/blob/master/Builds/FinalBuild-New.apk)
 2. Download the .APK file onto your android device. 
 3. Run the .APK file on your device to install the app onto your device. 
 ### Note
